@@ -1,1 +1,12 @@
+import "./js/header";
+import "./js/age";
+import "./js/numbers";
+import "./js/game";
+import "./js/calculate";
+import "./js//time";
 import "./js/dino";
+import "./js/football";
+import "./js/threenum";
+import "./js/photo";
+import "./js/scientist";
+import "./js/footer";
