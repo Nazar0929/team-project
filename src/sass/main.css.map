@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sources":["section/_dino.scss","main.css"],"names":[],"mappings":"AAAA;EACE,iBAAA;EACA,oBAAA;EACA,kBAAA;ACCF;ADGE;EACE,WAAA;EAEA,oCAAA;EACA,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;EACA,mBAAA;ACFJ","file":"main.css"}
