@@ -1,0 +1,64 @@
+.calculate {
+    &__title {
+        color: #000000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    &__flex {
+        display: flex;
+        gap: 38px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__firstnumber {
+        // width: 135px;
+        // height: 35px;
+        padding: 10px 20px;
+        color: #7E7E7E;
+        font-family: "Montserrat Alternates";
+        font-weight: 400;
+        background-color: #D7D7D7;
+        border: none;
+        border-radius: 20px;
+    }
+
+    &__secondnumber {
+        // width: 135px;
+        // height: 35px;
+        padding: 10px 20px;
+        color: #7E7E7E;
+        font-family: "Montserrat Alternates";
+        font-weight: 400;
+        line-height: 1.25;
+        background-color: #D7D7D7;
+        border: none;
+        border-radius: 20px;
+    }
+
+    &__result {
+        // width: 118px;
+        // height: 35px;
+        padding: 10px 20px;
+        color: #7E7E7E;
+        font-family: "Montserrat Alternates";
+        font-weight: 400;
+        line-height: 1.25;
+        background-color: #D7D7D7;
+        border: none;
+        border-radius: 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 62px;
+    }
+}
+
+// .calculate > .container {
+//     display: flex;
+// }
