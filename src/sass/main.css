@@ -90,52 +90,86 @@ html {
   }
 }
 
+.calculate {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
 .calculate__title {
   color: #000000;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
   text-align: center;
+  margin-bottom: 36px;
 }
 .calculate__flex {
   display: flex;
   gap: 38px;
-  margin-right: auto;
-  margin-left: auto;
+  justify-content: center;
+  align-items: center;
 }
 .calculate__firstnumber {
   padding: 10px 20px;
   color: #7E7E7E;
   font-family: "Montserrat Alternates";
+  font-size: 12px;
   font-weight: 400;
+  line-height: 1.25;
   background-color: #D7D7D7;
   border: none;
   border-radius: 20px;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+}
+.calculate__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 62px;
+}
+.calculate__button {
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  background-color: #000000;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
 }
 .calculate__secondnumber {
   padding: 10px 20px;
   color: #7E7E7E;
   font-family: "Montserrat Alternates";
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
   background-color: #D7D7D7;
   border: none;
   border-radius: 20px;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+}
+.calculate__calculation {
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  background-color: #000000;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
 }
 .calculate__result {
   padding: 10px 20px;
   color: #7E7E7E;
   font-family: "Montserrat Alternates";
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
   background-color: #D7D7D7;
   border: none;
   border-radius: 20px;
-}
-.calculate__list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 62px;
 }
 
 .dino {
