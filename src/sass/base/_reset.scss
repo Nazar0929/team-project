@@ -1,5 +1,7 @@
 a {
-   
+    color: none;
+        padding: 0;
+        margin: 0;
     text-decoration: none;
 }
 
@@ -11,7 +13,6 @@ ul {
 
 img {
     display: block;
-    width: 100%;
     max-width: 100%;
     height: auto;
 }
@@ -25,3 +26,6 @@ button {
     border: none;
     cursor: pointer;
 }
+
+
+

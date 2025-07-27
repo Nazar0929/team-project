@@ -10,3 +10,5 @@ import "./js/threenum";
 import "./js/photo";
 import "./js/scientist";
 import "./js/footer";
+import "./js/header-menu";
+import "./js/header-modal";
