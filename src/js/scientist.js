@@ -1,0 +1,170 @@
+const scientists = [ 
+    { 
+        name: "Albert", 
+        surname: "Einstein", 
+        born: 1879, 
+        dead: 1955, 
+        id: 1 
+    }, 
+    { 
+        name: "Isaac", 
+        surname: "Newton", 
+        born: 1643, 
+        dead: 1727, 
+        id: 2 
+    }, 
+    { 
+        name: "Galileo", 
+        surname: "Galilei", 
+        born: 1564, 
+        dead: 1642, 
+        id: 3 
+    }, 
+    { 
+        name: "Marie", 
+        surname: "Curie", 
+        born: 1867, 
+        dead: 1934, 
+        id: 4 
+    }, 
+    { 
+        name: "Johannes", 
+        surname: "Kepler", 
+        born: 1571, 
+        dead: 1630, 
+        id: 5 
+    }, 
+    { 
+        name: "Nicolaus", 
+        surname: "Copernicus", 
+        born: 1473, 
+        dead: 1543, 
+        id: 6 
+    }, 
+    { 
+        name: "Max", 
+        surname: "Planck", 
+        born: 1858, 
+        dead: 1947, 
+        id: 7 
+    }, 
+    { 
+        name: "Katherine", 
+        surname: "Blodgett", 
+        born: 1898, 
+        dead: 1979, 
+        id: 8 
+    }, 
+    { 
+        name: "Ada", 
+        surname: "Lovelace", 
+        born: 1815, 
+        dead: 1852, 
+        id: 9 
+    }, 
+    { 
+        name: "Sarah E.", 
+        surname: "Goode", 
+        born: 1855, 
+        dead: 1905, 
+        id: 10 
+    }, 
+    { 
+        name: "Lise", 
+        surname: "Meitner", 
+        born: 1878, 
+        dead: 1968, 
+        id: 11 
+    }, 
+    { 
+        name: "Hanna", 
+        surname: "Hammarström", 
+        born: 1829, 
+        dead: 1909, 
+        id: 12 
+    } 
+];
+
+const buttons = document.querySelectorAll(".scientist__button");
+
+// console.log(buttons[0]);
+
+buttons.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        // console.log(event.currentTarget.dataset.action);
+        const action = event.currentTarget.dataset.action;
+        switch (action) {
+            case "xix-century":
+                console.log("XIX century");
+                break;
+            case "albert":
+                console.log("albert");
+                break;
+            case "alphabet":
+                console.log("alphabet");
+                break;
+            case "c-leter":
+                console.log("c-leter");
+                break;
+            case "eldest":
+                console.log("eldest");
+                break;
+            case "a-leter":
+                console.log("a-leter");
+                break;
+            case "latest":
+                console.log("latest");
+                break;
+            case "eldest-youngest":
+                console.log("eldest-youngest");
+                break;
+            case "coincidence":
+                console.log("coincidence");
+                break;
+        }        
+    });
+
+
+});
+
+
+
+
+
+// scientists.forEach(({name, surname, born, dead}) => {
+//     const listEl = document.querySelector(".scientist__list");
+//     const li = document.createElement("li");
+//     li.classList.add("scientist__item");
+
+//     const nameEl = document.createElement("p");
+//     nameEl.textContent = name;
+//     nameEl.classList.add("scientist__name");
+
+//     const surNameEl = document.createElement("p")
+//     surNameEl.textContent = surname;
+//     surNameEl.classList.add("scientist__surname");
+
+//     const bornEl = document.createElement("p");
+//     bornEl.textContent = born;
+//     bornEl.classList.add("scientist__born");
+
+//     const deadEl = document.createElement("p");
+//     deadEl.textContent = dead;
+//     deadEl.classList.add("scientist__dead");
+
+//     li.append(nameEl, surNameEl, bornEl, deadEl);
+//     listEl.appendChild(li);
+// });
+
+const listEl = document.querySelector(".scientist__list");
+
+const pageItem = scientists.map(({name, surname, born, dead}) => {
+    const itemEl = `<li class="scientist__item">
+        <p class="scientist__name">${name} ${surname}</p>
+        <p class="scientist__life">${born} ${dead}</p>
+      </li>`;
+      return itemEl;
+}).join("");
+
+listEl.insertAdjacentHTML("beforeend", pageItem);
+

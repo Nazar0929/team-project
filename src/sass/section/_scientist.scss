@@ -23,7 +23,6 @@
     }
 
     &__item {
-        // padding: 31px 12px;
         width: 100px;
         height: 100px;
         border-radius: 20px;
@@ -39,7 +38,6 @@
         font-size: 8px;
         font-weight: 400;
         line-height: 1.7;
-        // text-align: center;
     }
 
     &__life {
@@ -47,7 +45,13 @@
         font-size: 8px;
         font-weight: 400;
         line-height: 1.7;
-        // text-align: center;
+    }
+
+    &__listofbuttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
 
     &__button {
