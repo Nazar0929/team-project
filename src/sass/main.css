@@ -26,7 +26,7 @@ button {
 
 body {
   background-image: url(../image/teamback.png);
-  font-family: "Montserrat";
+  font-family: "Montserrat Alternates";
   background-position: center 50px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -111,7 +111,6 @@ html {
 }
 .scientist__title {
   color: #000000;
-  font-family: "Montserrat Alternates";
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
@@ -141,14 +140,12 @@ html {
 }
 .scientist__name {
   color: #000000;
-  font-family: "Montserrat Alternates";
   font-size: 8px;
   font-weight: 400;
   line-height: 1.7;
 }
 .scientist__life {
   color: #000000;
-  font-family: "Montserrat Alternates";
   font-size: 8px;
   font-weight: 400;
   line-height: 1.7;
@@ -157,7 +154,6 @@ html {
   padding: 10px 20px;
   border-radius: 20px;
   color: #FFFFFF;
-  font-family: "Montserrat Alternates";
   font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
