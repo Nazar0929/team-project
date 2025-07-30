@@ -1,15 +1,31 @@
 <footer class="footer">
     <div class="container">
-        <div>
+        <div class="footer__wraps">
+        <div class="footer__box">
             <img src="../image/coding.png" alt="" class="footer__img">
             <ul>
-                <li><a href="">Тел: +38 (123) 456 78 90</a></li>
-                <li><a href="">E-Mail: codingmagic@gmail.com</a></li>
-                <li><a href="">Facebook: CodingMagic</a></li>
-                <li><a href="">Twitter: CodingMagic</a></li>
-                <li><a href="">Instagram: CodingMagic</a></li>
+                <li><a href="" class="footer__link">Тел: +38 (123) 456 78 90</a></li>
+                <li><a href="" class="footer__link">E-Mail: codingmagic@gmail.com</a></li>
+                <li><a href="" class="footer__link">Facebook: CodingMagic</a></li>
+                <li><a href="" class="footer__link">Twitter: CodingMagic</a></li>
+                <li><a href="" class="footer__link">Instagram: CodingMagic</a></li>
 
             </ul>
         </div>
+        <div>
+            <form class="footer__form">
+            <input type="text" placeholder="Ваша ел. адреса..." class="footer__input">
+            <button type="submit" class="footer__butt">Підписатись</button>
+            <p class="footer__text">*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</p>
+            </form>
+        </div>
+    </div>
     </div>
 </footer>
+
+    <div class="backdrop is-hidden">
+        <div class="modal">
+            <button class="backdrop__button"><img src="../image/close.png" class="backdrop__img" alt="close"></button>
+            <p class="backdrop__text">Дякую за підписку!</p>
+        </div>
+    </div>
