@@ -28,7 +28,7 @@ button {
 
 body {
   background-image: url(../image/teamback.png);
-  font-family: "Montserrat";
+  font-family: "Montserrat Alternates";
   background-position: center 50px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -654,7 +654,6 @@ body.dark-mode {
 }
 .calculate__title {
   color: #000000;
-  font-family: "Montserrat Alternates";
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
@@ -670,7 +669,6 @@ body.dark-mode {
 .calculate__firstnumber {
   padding: 10px 20px;
   color: #7E7E7E;
-  font-family: "Montserrat Alternates";
   font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
@@ -689,7 +687,6 @@ body.dark-mode {
   padding: 5px 10px;
   border-radius: 20px;
   color: #FFFFFF;
-  font-family: "Montserrat Alternates";
   font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
@@ -699,7 +696,6 @@ body.dark-mode {
 .calculate__secondnumber {
   padding: 10px 20px;
   color: #7E7E7E;
-  font-family: "Montserrat Alternates";
   font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
@@ -712,7 +708,6 @@ body.dark-mode {
   padding: 5px 10px;
   border-radius: 20px;
   color: #FFFFFF;
-  font-family: "Montserrat Alternates";
   font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
@@ -722,7 +717,6 @@ body.dark-mode {
 .calculate__result {
   padding: 10px 20px;
   color: #7E7E7E;
-  font-family: "Montserrat Alternates";
   font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
@@ -744,6 +738,68 @@ body.dark-mode {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 36px;
+}
+
+.scientist {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.scientist__title {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.scientist__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 36px;
+  -moz-column-gap: 59px;
+       column-gap: 59px;
+  width: 577px;
+  margin-bottom: 36px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.scientist__item {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scientist__name {
+  color: #000000;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.scientist__life {
+  color: #000000;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.scientist__listofbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.scientist__button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  background-color: #000000;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
 }
 
 .footer {
