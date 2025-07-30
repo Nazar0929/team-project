@@ -1,8 +1,134 @@
 .footer {
 
+    padding-bottom: 59px;
+    padding-top: 61px;
+
+&__wraps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
     &__img {
         width: 165px;
         height: 70px;
         flex-shrink: 0;
     }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 185px;
+    }
+
+    &__link {
+        color: #000;
+font-family: "Montserrat Alternates";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 170%; /* 20.4px */
+    }
+
+
+    &__input {
+padding: 10px 80px 10px 10px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 20px;
+background: #D7D7D7;
+border: none;
+    }
+
+
+    &__butt {
+
+padding: 13px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 20px;
+background: #000;
+color: #FFF;
+font-family: "Montserrat Alternates";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 46px;
+    }
+
+     &__text {
+        color: #000;
+font-family: "Montserrat Alternates";
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 18px;
+     }
+}
+
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+.backdrop {
+    background-color: #00000082;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+
+
+    &__img {
+        width: 15px;
+        height: 15px;
+    }
+
+
+
+    &__button {
+width: 30px;
+height: 30px;
+background-color: transparent;
+outline: 1px solid black;
+position: absolute;
+top: 30px;
+right: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+    }
+    
+
+    &__text {
+        color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+}
+
+.modal {
+    width: 463px;
+    // opacity: 1;
+height: 245px;
+border-radius: 20px;
+background: #FFF;
+text-align: center;
+padding: 70px 42px;
+position: relative;
 }
