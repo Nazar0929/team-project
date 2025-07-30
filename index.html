@@ -7,15 +7,97 @@
     <title>Team Project</title>
     
     <script type="module" crossorigin src="/team-project/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/team-project/assets/index-7503ba03.css">
+    <link rel="stylesheet" href="/team-project/assets/index-7384618f.css">
   </head>
   <body>
 
     <!-- Loads the specified .html file -->
     
+    <div class="all">
+    <header id="header__jakor" class="header">
+        <div class="container">
+            <nav class="header__navigation">
+                <a href="#age"><div class="header__logo"></div></a>
+                <ul class="header__list">
+                    <li class="header__item header__interactive">
+                        <p class="header__text">Інтерактив</p>
+                        <img src="../image/header-arrow.webp" alt="" class="header__arrow">
+                        <div class="header__dropdown">
+                          
+                            <button id = "nunn1" class="header__dropdown-item">Числовий</button>
+                            <button id = "nuj2" class="header__dropdown-item">Ігровий</button>
+                            <button id = "nul3" class="header__dropdown-item">Ознайомчий</button>
+                           
+                        </div>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__text">Наша команда</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#footer__id" class="header__text">Контакти</a>
+                    </li>
+                </ul>
+                <label class="header__theme">
+                    <input class="header__theme-changer" type="checkbox">
+                    <span class="header__theme-slider">
+                      <img class="header__theme-icon header__theme-icon-sun" src="../image/sun-icon.webp" alt="Light theme" value="light">
+                      <img class="header__theme-icon header__theme-icon-moon" src="../image/moon-icon.webp" alt="Black theme" value="dark">
+                    </span>
+                </label>
+                <p class="header__greetings">Вітаємо, User!</p>
     
+                <button class="header__burger" type="button" data-mobile-open>
+                   <div class="header__menu"></div>
+                  </button>
+            </nav>
+        </div>
+    </header>
+    </div>
     
-    
+    <section class="hero"  id="hero">
+    <div class="container">
+    <div class="hero__fullbox">
+      <h1 class="hero__title-Popular">Популярні інтерактивні ігри</h1>
+      <div class="hero__line-year"></div>
+        <p class="hero__title-year">Перевір в який рік ти народився</p>
+        <div class="hero__box-year">
+          <div class="hero__input-box-year">
+            <input type="text" class="hero__input-year" id="heroInput" placeholder="Введіть рік народження"/>
+
+            <button id="checkButton" class="hero__search-year" type="button" aria-label="button confirm">
+                <img width="15px" src="../image/search.webp" alt="search">
+            </button>
+          
+            <p id="result" class="hero__check-year">Ви народилися у високосний рік!</p>
+          </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+    <section class="numbers" id="number">
+    <div class="container">
+      <div class="numbers__border"></div>
+      <h2 class="numbers__logo">Введіть 3 числа</h2>
+      <ul class="numbers__list">
+        <li class="numbers__item">
+          <input type="text" class="numbers__input" id="imp1" placeholder="Введіть число" />
+        </li>
+        <li class="numbers__item">
+          <input type="text" class="numbers__input" id="imp2"  placeholder="Введіть число" />
+        </li>
+        <li class="numbers__item">
+          <input type="text" class="numbers__input" id="imp3" placeholder="Введіть число" />
+        </li>
+      </ul>
+      <div class="numbers__fix">
+        <p class="numbers__text">Найбільше число, яке ви ввели -  </p>
+        <p class="numbers__num" id="result223">  </p>
+      </div>
+      <div class="numbers__border"></div>
+    </div>
+  </section>
+  
     
     <section class="calculate">
   <div class="container">
@@ -69,7 +151,7 @@
     
     <section class="photo">
     <div class="container">
-        <h2 class="photo__title"></h2>
+        <h2 class="photo__title">Наша команда</h2>
         <button type="button" class="photo__left-btn"></button>
         <img src="" alt="contributor">
         <button type="button" class="photo__right-btn"></button>
@@ -177,19 +259,96 @@
 
     <footer class="footer">
     <div class="container">
-        <div>
+        <div class="footer__wraps">
+        <div class="footer__box">
             <img src="../image/coding.png" alt="" class="footer__img">
             <ul>
-                <li><a href="">Тел: +38 (123) 456 78 90</a></li>
-                <li><a href="">E-Mail: codingmagic@gmail.com</a></li>
-                <li><a href="">Facebook: CodingMagic</a></li>
-                <li><a href="">Twitter: CodingMagic</a></li>
-                <li><a href="">Instagram: CodingMagic</a></li>
+                <li><a href="" class="footer__link">Тел: +38 (123) 456 78 90</a></li>
+                <li><a href="" class="footer__link">E-Mail: codingmagic@gmail.com</a></li>
+                <li><a href="" class="footer__link">Facebook: CodingMagic</a></li>
+                <li><a href="" class="footer__link">Twitter: CodingMagic</a></li>
+                <li><a href="" class="footer__link">Instagram: CodingMagic</a></li>
 
             </ul>
         </div>
+        <div>
+            <form class="footer__form">
+            <input type="text" placeholder="Ваша ел. адреса..." class="footer__input">
+            <button type="submit" class="footer__butt">Підписатись</button>
+            <p class="footer__text">*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</p>
+            </form>
+        </div>
+    </div>
     </div>
 </footer>
+
+    <div class="backdrop is-hidden">
+        <div class="modal">
+            <button class="backdrop__button"><img src="../image/close.png" class="backdrop__img" alt="close"></button>
+            <p class="backdrop__text">Дякую за підписку!</p>
+        </div>
+    </div>
+    <div class="mobile">
+    <div class="mobile__backdrop is-hidden" data-mobile>
+      <div class="mobile__window">
+        <button class="mobile__button" type="button" data-mobile-close>
+            <div class="menu__box">
+            <ul class="menu__list">
+                <li class="menu__items">
+                    <p class="menu__filter">Числовий</p>
+                </li>
+                <li class="menu__items"> 
+                    <p class="menu__filter">Ігровий</p>
+                </li>
+                <li class="menu__items"> 
+                    <p class="menu__filter">Ознайомчий</p>
+                </li>
+            </ul>
+
+            <ul class="menu__list2">
+                <li class="menu__items2">
+                    <a href="#acquaintance" class="menu__text">Наша команда</a>
+                </li>
+                <li class="menu__items2">
+                    <a href="#footer__id" class="menu__text">Контакти</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    <section class="register">
+    
+    <div class="register__container">
+        
+
+        <p class="register__text">
+            Привіт!<br>
+            Ви потрапили на сайт інтерактивних ігор та завдань.<br>
+            Надіємось, що вам сподобається і ви отримаєте позитивні емоції!<br>
+            Бажаємо Вам гарно провести час!
+        </p>
+    <div class="register__box">
+    
+        <label for="username" class="register__label">Введіть своє ім’я:</label>
+        <input type="text" id="username" class="register__input" placeholder="Ваше ім’я...">
+        
+        <button class="register__button">Зберегти</button>
+    </div>
+    </div>
+    
+
+    <img src="data:image/webp;base64,UklGRh4BAABXRUJQVlA4WAoAAAAQAAAAHQAAHQAAQUxQSNIAAAABgFtr29rmbe1KI5iZhvFx5xWYXVHliqnGyh4AAzNwKikdGdp0Yun7kwwQEQzcto3TmL27/QP/rmx1Tdmo+Le7u7urWKc6WIGq+FNnkr+t0+VkuK0zURrFXs/yWqfMDdzzNhb73xSO615UaU5ihz+Q2U7DlPhC/1pYGCIlFrQ4zY8o2WjszQFJUc0WsJDEPlfCEDWxQOP/HCB8UvNABSVtJS0qYKZ5EKfqfyROw4HgMmnc50zHD/tJCJuuh+eIDmBTmOc9gqlCW6SsVQxhA3D4kwJWUDggJgAAANACAJ0BKh4AHgA+kUSdSqWjoqGoCACwEglpAAA9o6AA/vjPGsAA" class="register__icon register__icon--left-top" alt="sword">
+    <img src="data:image/webp;base64,UklGRmoBAABXRUJQVlA4WAoAAAAQAAAAHQAAHQAAQUxQSB0BAAABkHNb27HH6q+4s22zt1Wxs23b5pPedlJalc2WVcb2TPA+8z7vt1YiYgIgpPfGp90gCB565aoYcuUl2KUnANdNwR4AQOxBCIv4+Pj4zw4AbH7Ex8fHBzNUHfT09PToA7Dv4T6wVIHxJVBovDrpkweq5nL9ecgnJdCOiIF91bE4Eja6Ds8UaBnX3WO3nIBFAFj3Bpf0UfTv9EEvb+A0lFHU3lOK+gAgJicnZ2KesziRk5OTo6/+jUY4D4QQksQpIoSQraqKWYrzO1UOeEcNLt9f6VNQdlVdv89Qtd6WLof/mtY3PrBUgZGFiER7671I+qtyfn5m/MnrlTpkWWV4vVcCO6+letHoX01VTkYJB+WomvkqEQCoekn+PrBWMAAAVlA4ICYAAADQAgCdASoeAB4APpFEnUqlo6KhqAgAsBIJaQAAPaOgAP74zxrAAA==" class="register__icon register__icon--left-bottom" alt="puzzle">
+    <img src="data:image/webp;base64,UklGRpgBAABXRUJQVlA4WAoAAAAQAAAAHQAAHQAAQUxQSEsBAAABkGvb1rE963dl27btK3Bs1K74vlXadLZtV7Z+G8//x2afU7xMriAiJiDptrjcmwTQvRmXtdsGYWzp3AkG5tqaLTKNmLlu9g9NcP2/qngKJE7ystKVOlUMrDpAyUylCw2qGEAlQflMpaMKVQyw+CFA6XS5k2JVbXi6wFClipxQ8rYMMhRAlSrCESVvyzi4EihSNbhAWS+T0cDrIlxx0QX/je9laqs3EKR9lqkNDjy7bxSSebBb1/WeAxlkHnrhbWvLCZgPO7v10QMwC25qtnqKQCCnm1tJMA5l72399ZojIgswLhpnqBOxJakgWA9DuoN9sAzm9DG6FJbDQQcD27F/pNeBfxtwXYzbgM5A+RFtB2BJnzfA7U4AWaN0a4OHOqEbLyh/Ay02/gTB+nu6qfZEM7F7W6PxexLmyR/y/PSztmKuyJdWrFuV3AkHAFZQOCAmAAAA0AIAnQEqHgAeAD6RRJ1KpaOioagIALASCWkAAD2joAD++M8awAA=" class="register__icon register__icon--right-top" alt="code">
+    <img src="data:image/webp;base64,UklGRhoBAABXRUJQVlA4WAoAAAAQAAAAHQAAHQAAQUxQSM4AAAABgCPbtirldNS4xzyG4LGnZOT0ELC0ZQYUM7Dc3X0CP8MlpB+86GdUbfTVpUcQEROgiYD5S1558LHgI99g4oV+xZIqtp+Al508lA3aipvbObuOR4AFswUORnOPjBtVkbZLYywbteIlDXBqpCuKajpgxmoAQuDRWWnkmo8DJzOpoUY/zf70/H8aDWk0UFY0qaJ9ZWSapGyt3fxrn7t/bDKb5P2BRGaag8TZuQRCp90qySyhyWxi1am0JLPISgv02w3wPAE+Fnws5JV/wTxMCFZQOCAmAAAA0AIAnQEqHgAeAD6RRJ1KpaOioagIALASCWkAAD2joAD++M8awAA=" class="register__icon register__icon--right-bottom" alt="game">
+    <div class="register__backdrop"></div>
+    <button class="register__close">&times;</button>
+</div>
+</section>
+
+
+
     
   </body>
 </html>
