@@ -56,7 +56,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #ff5000 0%, #ff5000 100%);
+  background: linear-gradient(90deg, #c6c6c6 0%, #5e5e5e 100%);
 }
 
 ::-moz-selection {
@@ -740,6 +740,51 @@ body.dark-mode {
   margin-bottom: 36px;
 }
 
+.socker .container {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.socker__title {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.socker__field {
+  display: flex;
+  position: relative;
+  width: 450px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 37px;
+  border: 2px solid #000;
+  background: #5abb58;
+  margin-top: 36px;
+  justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .socker__field {
+    width: 720px;
+    height: 220px;
+  }
+}
+.socker__ball {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.5s ease, left 0.5s ease;
+}
+
 .scientist {
   padding-top: 36px;
   padding-bottom: 36px;
@@ -819,7 +864,7 @@ body.dark-mode {
 .footer__box {
   display: flex;
   align-items: center;
-  gap: 185px;
+  gap: 135px;
 }
 .footer__link {
   color: #000;
@@ -830,8 +875,7 @@ body.dark-mode {
   line-height: 170%; /* 20.4px */
 }
 .footer__input {
-  padding: 10px 80px 10px 10px;
-  align-items: flex-start;
+  padding: 10px 40px 10px 10px;
   gap: 10px;
   border-radius: 20px;
   background: #D7D7D7;
@@ -854,7 +898,7 @@ body.dark-mode {
 .footer__text {
   color: #000;
   font-family: "Montserrat Alternates";
-  font-size: 10px;
+  font-size: 8px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -867,26 +911,27 @@ body.dark-mode {
   pointer-events: none;
 }
 
-.backdrop {
+.backdrops {
   background-color: rgba(0, 0, 0, 0.5098039216);
   display: flex;
+  opacity: 1;
   justify-content: center;
   align-items: center;
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  z-index: 9999;
 }
-.backdrop__img {
+.backdrops__img {
   width: 15px;
   height: 15px;
 }
-.backdrop__button {
+.backdrops__button {
   width: 30px;
   height: 30px;
   background-color: transparent;
-  outline: 1px solid black;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -895,14 +940,31 @@ body.dark-mode {
   align-items: center;
   border-radius: 50%;
 }
-.backdrop__text {
+.backdrops__text {
   color: #000;
   text-align: center;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.backdrops__icons {
+  position: absolute;
+  top: 69px;
+  left: 43px;
+}
+.backdrops .backdrops__icons:nth-of-type(2) {
+  left: 87px;
+  top: 145px;
+}
+.backdrops .backdrops__icons:nth-of-type(3) {
+  top: 145px;
+  left: 347px;
+}
+.backdrops .backdrops__icons:nth-of-type(4) {
+  left: 391px;
+  top: 69px;
 }
 
 .modal {
