@@ -69,6 +69,12 @@ html {
   color: white;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .container {
   max-width: 1110px;
   padding-left: 10px;
@@ -667,6 +673,8 @@ body.dark-mode {
   align-items: center;
 }
 .calculate__firstnumber {
+  width: 135px;
+  height: 35px;
   padding: 10px 20px;
   color: #7E7E7E;
   font-size: 12px;
@@ -682,6 +690,7 @@ body.dark-mode {
   flex-wrap: wrap;
   gap: 10px;
   width: 62px;
+  justify-content: end;
 }
 .calculate__button {
   padding: 5px 10px;
@@ -694,6 +703,8 @@ body.dark-mode {
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
 }
 .calculate__secondnumber {
+  width: 135px;
+  height: 35px;
   padding: 10px 20px;
   color: #7E7E7E;
   font-size: 12px;
@@ -715,6 +726,8 @@ body.dark-mode {
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
 }
 .calculate__result {
+  width: 118px;
+  height: 35px;
   padding: 10px 20px;
   color: #7E7E7E;
   font-size: 12px;

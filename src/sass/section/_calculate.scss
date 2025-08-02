@@ -14,15 +14,13 @@
     &__flex {
         display: flex;
         gap: 38px;
-        // margin-right: auto;
-        // margin-left: auto;
         justify-content: center;
         align-items: center;
     }
 
     &__firstnumber {
-        // width: 135px;
-        // height: 35px;
+        width: 135px;
+        height: 35px;
         padding: 10px 20px;
         color: #7E7E7E;
         font-size: 12px;
@@ -39,6 +37,7 @@
         flex-wrap: wrap;
         gap: 10px;
         width: 62px;
+        justify-content: end;
     }
 
     &__button {
@@ -53,8 +52,8 @@
     }
 
     &__secondnumber {
-        // width: 135px;
-        // height: 35px;
+        width: 135px;
+        height: 35px;
         padding: 10px 20px;
         color: #7E7E7E;
         font-size: 12px;
@@ -78,8 +77,8 @@
     }
 
     &__result {
-        // width: 118px;
-        // height: 35px;
+        width: 118px;
+        height: 35px;
         padding: 10px 20px;
         color: #7E7E7E;
         font-size: 12px;
