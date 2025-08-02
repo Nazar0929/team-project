@@ -1,0 +1,46 @@
+.socker .container {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  
+  .socker__title {
+    color: #000;
+    font-family: "Montserrat Alternates";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+  
+  .socker__field {
+    display: flex;
+    position: relative;
+    width: 450px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 37px;
+    border: 2px solid #000;
+    background: #5abb58;
+    margin-top: 36px;
+    justify-self: center;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .socker__field {
+      width: 720px;
+      height: 220px;
+    }
+  }
+  
+  .socker__ball {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s ease, left 0.5s ease;
+  }
+  
