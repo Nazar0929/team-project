@@ -96,15 +96,11 @@ const listEl = document.querySelector(".scientist__list");
 // listEl.insertAdjacentHTML("beforeend", pageItem);
 
 const renderScientists = (array) => {
-    listEl.innerHTML = array.map(({name, surname, born, dead}) => {
-        
-     return `<li class="scientist__item">
+    listEl.innerHTML = array.map(({name, surname, born, dead}) => `<li class="scientist__item">
         <p class="scientist__name">${name} ${surname}</p>
         <p class="scientist__life">${born}-${dead}</p>
-      </li>`
-    }).join("")
-}
-
+      </li>`).join("");
+};
 
 
 
@@ -113,52 +109,45 @@ buttons.forEach((btn) => {
         const action = event.currentTarget.dataset.action;
         switch (action) {
             case "xix-century":
-                const nineteenCentury = scientists.filter((s) => s.born >= 1800 && s.born <= 1900)
+                const nineteenCentury = scientists.filter((s) => s.born >= 1800 && s.born <= 1900);
                 renderScientists(nineteenCentury);
-                
                 break;
             case "albert":
-                const birthOfAlbert = scientists.find((s) => s.name === "Albert")
-                alert(`Альберт Ейнштейн народився у ${birthOfAlbert.born} році`); 
-                
+                const birthOfAlbert = scientists.find((s) => s.name === "Albert");
+                alert(`Albert Einstein народився у ${birthOfAlbert.born} році`); 
                 break;
             case "alphabet":
                 const sortByAlphabet = [...scientists].sort((a, b) => a.name.localeCompare(b.name));
                 renderScientists(sortByAlphabet);
-                
                 break;
             case "c-leter":
                 const findByLetterC = scientists.filter((s) => s.surname.startsWith("C"));
                 renderScientists(findByLetterC);
-                
                 break;
             case "eldest":
                 const sortByAge = [...scientists].sort((a, b) => (b.dead - b.born) - (a.dead - a.born));
                 renderScientists(sortByAge);
-                
                 break;
             case "a-leter":
-                const findByLetterA = scientists.filter((s) => !s.name.startsWith("A"))
-                renderScientists(findByLetterA)
+                const findByLetterA = scientists.filter((s) => !s.name.startsWith("A"));
+                renderScientists(findByLetterA);
                 break;
             case "latest":
-                        //   Знайти вченого, який народився найпізніше
                 const findLatestBirth = [...scientists].sort((a,b ) => b.born - a.born);
-                alert(`${findLatestBirth[0].name} ${findLatestBirth[0].surname}`);
-                
-                
+                alert(`${findLatestBirth[0].name} ${findLatestBirth[0].surname} народився/лася найпізніше(у ${findLatestBirth[0].born} році)`);
                 break;
             case "eldest-youngest":
                 // Знайти вченого, який прожив найдовше і вченого, який прожив найменше
+                const findYoungestAndOldest = [...scientists].sort((a, b) => (b.dead - b.born) - (a.dead - a.born));
+                alert(`${findYoungestAndOldest[0].name} ${findYoungestAndOldest[0].surname} прожив/ла найдовше(${findYoungestAndOldest[0].dead - findYoungestAndOldest[0].born} років), а ${findYoungestAndOldest[findYoungestAndOldest.length - 1].name} ${findYoungestAndOldest[findYoungestAndOldest.length - 1].surname} прожив/ла найменше(${findYoungestAndOldest[findYoungestAndOldest.length - 1].dead - findYoungestAndOldest[findYoungestAndOldest.length - 1].born} років)`);
                 break;
             case "coincidence":
-                console.log("coincidence");
+                const findCoincidenceInName = scientists.filter((s) => s.name[0] === s.surname[0]);
+                renderScientists(findCoincidenceInName);
                 break;
-        }        
+        };        
     });
-
-
 });
 
 
-renderScientists(scientists)
+renderScientists(scientists);
