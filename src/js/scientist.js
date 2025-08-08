@@ -86,14 +86,7 @@ const scientists = [
 ];
 
 const buttons = document.querySelectorAll(".scientist__button");
-
 const listEl = document.querySelector(".scientist__list");
-
-// const pageItem = scientists
-//       return itemEl;
-// }).join("");
-
-// listEl.insertAdjacentHTML("beforeend", pageItem);
 
 const renderScientists = (array) => {
     listEl.innerHTML = array.map(({name, surname, born, dead}) => `<li class="scientist__item">
@@ -101,8 +94,6 @@ const renderScientists = (array) => {
         <p class="scientist__life">${born}-${dead}</p>
       </li>`).join("");
 };
-
-
 
 buttons.forEach((btn) => {
     btn.addEventListener("click", (event) => {
@@ -137,7 +128,6 @@ buttons.forEach((btn) => {
                 alert(`${findLatestBirth[0].name} ${findLatestBirth[0].surname} народився/лася найпізніше(у ${findLatestBirth[0].born} році)`);
                 break;
             case "eldest-youngest":
-                // Знайти вченого, який прожив найдовше і вченого, який прожив найменше
                 const findYoungestAndOldest = [...scientists].sort((a, b) => (b.dead - b.born) - (a.dead - a.born));
                 alert(`${findYoungestAndOldest[0].name} ${findYoungestAndOldest[0].surname} прожив/ла найдовше(${findYoungestAndOldest[0].dead - findYoungestAndOldest[0].born} років), а ${findYoungestAndOldest[findYoungestAndOldest.length - 1].name} ${findYoungestAndOldest[findYoungestAndOldest.length - 1].surname} прожив/ла найменше(${findYoungestAndOldest[findYoungestAndOldest.length - 1].dead - findYoungestAndOldest[findYoungestAndOldest.length - 1].born} років)`);
                 break;
@@ -148,6 +138,5 @@ buttons.forEach((btn) => {
         };        
     });
 });
-
 
 renderScientists(scientists);
