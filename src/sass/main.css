@@ -573,6 +573,70 @@ body.dark-mode {
   }
 }
 
+.game {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.game__second-list {
+  position: absolute;
+  top: 725px;
+  margin-left: 740px;
+}
+.game__title {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  line-height: normal;
+}
+.game__list {
+  gap: 38px;
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game__button {
+  padding: 10px;
+  border-radius: 20px;
+  background: #000;
+}
+.game__text {
+  text-align: center;
+  margin-top: 36px;
+}
+.game__box {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+.game__choice {
+  display: inline-flex;
+  padding: 10px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  justify-content: center;
+  border-radius: 20px;
+  background: #000;
+  color: white;
+  width: 300px;
+}
+
+.subline {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.line {
+  display: inherit;
+  height: 1px;
+  width: 536px;
+  background-color: #000;
+}
+
 .numbers .container {
   padding-top: 36px;
   padding-bottom: 36px;
@@ -790,12 +854,22 @@ body.dark-mode {
 .socker__ball {
   width: 50px;
   height: 50px;
+  z-index: 1;
   flex-shrink: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: top 0.5s ease, left 0.5s ease;
+}
+
+.socker__vorots {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 200px;
 }
 
 .scientist {

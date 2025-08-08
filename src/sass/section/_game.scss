@@ -1,0 +1,72 @@
+.game {
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+
+    &__second-list {
+position: absolute;
+    top: 725px;
+    margin-left: 740px;
+    }
+
+    &__title {
+        color: #000;
+font-family: "Montserrat Alternates";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+text-align: center;
+line-height: normal;
+    }
+
+    &__list {
+gap: 38px;
+margin-top: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__button {
+        padding: 10px;
+border-radius: 20px;
+background: #000;
+    }
+
+    &__text {
+        text-align: center;
+        margin-top: 36px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        margin-top: 36px;
+    }
+
+
+    &__choice {
+        display: inline-flex;
+padding: 10px 20px;
+align-items: flex-start;
+gap: 10px;
+justify-content: center;
+border-radius: 20px;
+background: #000;
+color: white;
+width: 300px;
+    }
+}
+
+.subline {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.line {
+display: inherit;
+    height: 1px;
+    width: 536px;
+    background-color: #000;
+}
