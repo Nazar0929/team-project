@@ -732,9 +732,16 @@ body.dark-mode {
 }
 .calculate__flex {
   display: flex;
-  gap: 38px;
+  gap: 14px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .calculate__flex {
+    gap: 38px;
+    flex-direction: row;
+  }
 }
 .calculate__firstnumber {
   width: 135px;
@@ -753,8 +760,12 @@ body.dark-mode {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  width: 62px;
   justify-content: end;
+}
+@media screen and (min-width: 768px) {
+  .calculate__list {
+    width: 62px;
+  }
 }
 .calculate__button {
   padding: 5px 10px;
