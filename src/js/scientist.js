@@ -86,53 +86,74 @@ const scientists = [
 ];
 
 const buttons = document.querySelectorAll(".scientist__button");
+const listEl = document.querySelector(".scientist__list");
+
+const renderScientists = (array) => {
+    listEl.innerHTML = array.map(({name, surname, born, dead}) => `<li class="scientist__item">
+        <p class="scientist__name">${name} ${surname}</p>
+        <p class="scientist__life">${born}-${dead}</p>
+      </li>`).join("");
+};
 
 buttons.forEach((btn) => {
     btn.addEventListener("click", (event) => {
         const action = event.currentTarget.dataset.action;
         switch (action) {
             case "xix-century":
-                console.log("XIX century");
+                const nineteenCentury = scientists.filter((s) => s.born >= 1800 && s.born < 1900);
+                renderScientists(nineteenCentury);
+                break;
+            case "sum":
+                const arrayOfYears = scientists.map((s) => s.dead - s.born);
+                const sum = arrayOfYears.reduce((acc, value) => acc + value, 0);
+                alert(`Всі вчені загалом прожили ${sum} рік/роки/років`)
                 break;
             case "albert":
-                console.log("albert");
+                const birthOfAlbert = scientists.find((s) => s.name === "Albert");
+                alert(`Albert Einstein народився у ${birthOfAlbert.born} році`); 
                 break;
             case "alphabet":
-                console.log("alphabet");
+                const sortByAlphabet = [...scientists].sort((a, b) => a.name.localeCompare(b.name));
+                renderScientists(sortByAlphabet);
                 break;
             case "c-leter":
-                console.log("c-leter");
+                const findByLetterC = scientists.filter((s) => s.surname.startsWith("C"));
+                renderScientists(findByLetterC);
                 break;
             case "eldest":
-                console.log("eldest");
+                const sortByAge = [...scientists].sort((a, b) => (b.dead - b.born) - (a.dead - a.born));
+                renderScientists(sortByAge);
+                break;
+            case "delete":
+                const deleteScientists = scientists.filter((s) => s.born >= 1700 || s.born < 1400 );
+                renderScientists(deleteScientists);
                 break;
             case "a-leter":
-                console.log("a-leter");
+                const findByLetterA = scientists.filter((s) => !s.name.startsWith("A"));
+                renderScientists(findByLetterA);
                 break;
             case "latest":
-                console.log("latest");
+                const findLatestBirth = [...scientists].sort((a, b) => b.born - a.born);
+                alert(`${findLatestBirth[0].name} ${findLatestBirth[0].surname} народився/лася найпізніше(у ${findLatestBirth[0].born} році)`);
                 break;
             case "eldest-youngest":
-                console.log("eldest-youngest");
+                const findYoungestAndOldest = [...scientists].sort((a, b) => (b.dead - b.born) - (a.dead - a.born));
+                alert(`${findYoungestAndOldest[0].name} ${findYoungestAndOldest[0].surname} прожив/ла найдовше(${findYoungestAndOldest[0].dead - findYoungestAndOldest[0].born} років), а ${findYoungestAndOldest[findYoungestAndOldest.length - 1].name} ${findYoungestAndOldest[findYoungestAndOldest.length - 1].surname} прожив/ла найменше(${findYoungestAndOldest[findYoungestAndOldest.length - 1].dead - findYoungestAndOldest[findYoungestAndOldest.length - 1].born} років)`);
                 break;
             case "coincidence":
-                console.log("coincidence");
+                const findCoincidenceInName = scientists.filter((s) => s.name[0] === s.surname[0]);
+                renderScientists(findCoincidenceInName);
                 break;
-        }        
+            case "work":
+                const isScientistsWorked = scientists.every((s) => s.born + 18 < 1900 && s.born + 18 >= 1800 || s.dead < 1900 && s.dead >= 1800);
+                if (isScientistsWorked) {
+                    alert("Всі вчені працювали в XIX столітті")
+                } else {
+                    alert("Не всі вчені працювали в XIX столітті")
+                }
+                break;
+        };        
     });
-
-
 });
 
-
-const listEl = document.querySelector(".scientist__list");
-
-const pageItem = scientists.map(({name, surname, born, dead}) => {
-    const itemEl = `<li class="scientist__item">
-        <p class="scientist__name">${name} ${surname}</p>
-        <p class="scientist__life">${born}-${dead}</p>
-      </li>`;
-      return itemEl;
-}).join("");
-
-listEl.insertAdjacentHTML("beforeend", pageItem);
+renderScientists(scientists);
