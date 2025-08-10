@@ -812,6 +812,14 @@ body.dark-mode {
   border: none;
   border-radius: 20px;
 }
+.calculate__attention {
+  color: #7E7E7E;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  margin-top: 10px;
+}
 
 .dino {
   padding-top: 36px;
