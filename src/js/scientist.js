@@ -100,8 +100,13 @@ buttons.forEach((btn) => {
         const action = event.currentTarget.dataset.action;
         switch (action) {
             case "xix-century":
-                const nineteenCentury = scientists.filter((s) => s.born >= 1800 && s.born <= 1900);
+                const nineteenCentury = scientists.filter((s) => s.born >= 1800 && s.born < 1900);
                 renderScientists(nineteenCentury);
+                break;
+            case "sum":
+                const arrayOfYears = scientists.map((s) => s.dead - s.born);
+                const sum = arrayOfYears.reduce((acc, value) => acc + value, 0);
+                alert(`Всі вчені загалом прожили ${sum} рік/роки/років`)
                 break;
             case "albert":
                 const birthOfAlbert = scientists.find((s) => s.name === "Albert");
@@ -119,12 +124,16 @@ buttons.forEach((btn) => {
                 const sortByAge = [...scientists].sort((a, b) => (b.dead - b.born) - (a.dead - a.born));
                 renderScientists(sortByAge);
                 break;
+            case "delete":
+                const deleteScientists = scientists.filter((s) => s.born >= 1700 || s.born < 1400 );
+                renderScientists(deleteScientists);
+                break;
             case "a-leter":
                 const findByLetterA = scientists.filter((s) => !s.name.startsWith("A"));
                 renderScientists(findByLetterA);
                 break;
             case "latest":
-                const findLatestBirth = [...scientists].sort((a,b ) => b.born - a.born);
+                const findLatestBirth = [...scientists].sort((a, b) => b.born - a.born);
                 alert(`${findLatestBirth[0].name} ${findLatestBirth[0].surname} народився/лася найпізніше(у ${findLatestBirth[0].born} році)`);
                 break;
             case "eldest-youngest":
@@ -134,6 +143,14 @@ buttons.forEach((btn) => {
             case "coincidence":
                 const findCoincidenceInName = scientists.filter((s) => s.name[0] === s.surname[0]);
                 renderScientists(findCoincidenceInName);
+                break;
+            case "work":
+                const isScientistsWorked = scientists.every((s) => s.born + 18 < 1900 && s.born + 18 >= 1800 || s.dead < 1900 && s.dead >= 1800);
+                if (isScientistsWorked) {
+                    alert("Всі вчені працювали в XIX столітті")
+                } else {
+                    alert("Не всі вчені працювали в XIX столітті")
+                }
                 break;
         };        
     });
