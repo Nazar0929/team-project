@@ -52,6 +52,27 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+
+
+    }
+
+    &__itembtn {
+   
+
+
+        @media screen and (min-width: 1110px) {
+            flex-basis: calc((100% - 20px) / 2);
+
+        &:nth-child(n) {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        &:nth-child(2n) {
+            text-align: left;
+            margin-right: auto;
+        }                
+        }
     }
 
     &__button {

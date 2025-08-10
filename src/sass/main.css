@@ -1067,6 +1067,19 @@ body.dark-mode {
   justify-content: center;
   gap: 20px;
 }
+@media screen and (min-width: 1110px) {
+  .scientist__itembtn {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+  .scientist__itembtn:nth-child(n) {
+    text-align: right;
+    margin-left: auto;
+  }
+  .scientist__itembtn:nth-child(2n) {
+    text-align: left;
+    margin-right: auto;
+  }
+}
 .scientist__button {
   padding: 10px 20px;
   border-radius: 20px;
