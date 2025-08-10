@@ -20,6 +20,21 @@
         margin-bottom: 36px;
         margin-right: auto;
         margin-left: auto;
+        justify-content: center;
+        align-items: center;
+        width: 259px;
+        height: 780px;
+        
+
+        @media screen and (min-width: 768px) {
+            width: 418px;
+            height: 508px;
+        }
+
+        @media screen and (min-width: 1110px) {
+            width: 577px;
+            height: 372px;
+        }
     }
 
     &__item {
@@ -49,17 +64,19 @@
 
     &__listofbuttons {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 20px;
 
-
+        @media screen and (min-width: 1110px) {
+            flex-wrap: wrap;      
+            flex-direction: row;     
+            align-items: normal;
+        }
     }
 
     &__itembtn {
-   
-
-
         @media screen and (min-width: 1110px) {
             flex-basis: calc((100% - 20px) / 2);
 

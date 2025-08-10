@@ -1038,6 +1038,22 @@ body.dark-mode {
   margin-bottom: 36px;
   margin-right: auto;
   margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  width: 259px;
+  height: 780px;
+}
+@media screen and (min-width: 768px) {
+  .scientist__list {
+    width: 418px;
+    height: 508px;
+  }
+}
+@media screen and (min-width: 1110px) {
+  .scientist__list {
+    width: 577px;
+    height: 372px;
+  }
 }
 .scientist__item {
   width: 100px;
@@ -1063,9 +1079,17 @@ body.dark-mode {
 }
 .scientist__listofbuttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 20px;
+}
+@media screen and (min-width: 1110px) {
+  .scientist__listofbuttons {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: normal;
+  }
 }
 @media screen and (min-width: 1110px) {
   .scientist__itembtn {
