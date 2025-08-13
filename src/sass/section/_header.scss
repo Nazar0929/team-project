@@ -18,11 +18,11 @@
     }
   
     &__menu {
-      background-image: url(../img/menu.svg);
+      // background-image: url(../image/header-coding.png);
       background-repeat: no-repeat;
       width: 95px;
       height: 39px;
-  
+      // display: block;
     }
   
     &__dropdown {
@@ -170,7 +170,7 @@
   
       &-slider {
         width: 40px;
-        height: 22px;
+        // height: 22px;
 
           position: absolute;
           top: 0;
@@ -260,6 +260,161 @@
     padding-bottom: 80px;
   }
 
+
+
+
+
+
+//              Чорна тема
+
+
+
+
+
+
+
+
   body.dark-mode {
-    background-color: red;
+    background-color: #333;
   }
+
+
+  .dark-mode a {
+    color: white;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .container {
+    background-color: #444444;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .header {
+    background-color: #444444;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .footer {
+    background-color: #444444;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .hero__line-year {
+    background-color: white;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .calculate__flex {
+    border-top: solid white 1px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  
+  .dark-mode .numbers__border {
+    border-top: solid white 1px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  
+  .dark-mode p {
+    color: white;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode h1 {
+    color: white;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode h2 {
+    color: white;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode h3 {
+    color: white;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  
+  .dark-mode .science__name {
+    color: #000;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  // .dark-mode .header__logo {
+  //   background-image: url(../img/white-logo.webp);
+  //   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // }
+  
+  // .dark-mode .footer__box {
+  //   background-image: url(./image/white-logo1.webp);
+  //   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // }
+  
+  .dark-mode .modal {
+    background-color: #444444;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .register{
+    background-color: #616161;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .dark-mode span{
+    color: white;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  
+  
+  
+  
+  
+  
+  .dark-mode .game__description{
+    color: white;
+  }
+  
+  
+  .dark-mode .calculate__secondnumber {
+    color: #000;
+  }
+  
+  
+  
+  .dark-mode #result-text {
+    color: white;
+  }
+  
+  
+  
+  .dark-mode .hero__check-year {
+    color: rgb(8, 170, 8);
+  }
+  
+  
+  .dark-mode .mobile__window {
+    background: #333333;
+  }
+  
+  .dark-mode .header__menu {
+    background-image: url(./image/white-logo.png);
+    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .mobilee__windoww {
+    background: #333333;
+  }
+
+  .dark-mode section {
+    background-color: #444444;
+  }
+
+  
+

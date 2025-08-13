@@ -116,7 +116,6 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 .header__menu {
-  background-image: url(../img/menu.svg);
   background-repeat: no-repeat;
   width: 95px;
   height: 39px;
@@ -254,7 +253,6 @@ input::-webkit-inner-spin-button {
 }
 .header__theme-slider {
   width: 40px;
-  height: 22px;
   position: absolute;
   top: 0;
   right: 0;
@@ -326,7 +324,121 @@ input::-webkit-inner-spin-button {
 }
 
 body.dark-mode {
-  background-color: red;
+  background-color: #333;
+}
+
+.dark-mode a {
+  color: white;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .container {
+  background-color: #444444;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .header {
+  background-color: #444444;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .footer {
+  background-color: #444444;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .hero__line-year {
+  background-color: white;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .calculate__flex {
+  border-top: solid white 1px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .numbers__border {
+  border-top: solid white 1px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode p {
+  color: white;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode h1 {
+  color: white;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode h2 {
+  color: white;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode h3 {
+  color: white;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .science__name {
+  color: #000;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .modal {
+  background-color: #444444;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .register {
+  background-color: #616161;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode span {
+  color: white;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .game__description {
+  color: white;
+}
+
+.dark-mode .calculate__secondnumber {
+  color: #000;
+}
+
+.dark-mode #result-text {
+  color: white;
+}
+
+.dark-mode .hero__check-year {
+  color: rgb(8, 170, 8);
+}
+
+.dark-mode .mobile__window {
+  background: #333333;
+}
+
+.dark-mode .header__menu {
+  background-image: url(./image/white-logo.png);
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .mobilee__windoww {
+  background: #333333;
+}
+
+.dark-mode section {
+  background-color: #444444;
 }
 
 .hero .container {
@@ -343,10 +455,6 @@ body.dark-mode {
   }
   .hero__title-year {
     font-size: 15px;
-  }
-  .hero__input-year {
-    max-width: 220px;
-    font-size: 13px;
   }
   .hero__search-year {
     width: 38px;
@@ -392,11 +500,9 @@ body.dark-mode {
   background: #d7d7d7;
   border: none;
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
-  font-size: 13px;
-  padding-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
+  font-size: 15px;
+  padding-top: 8px;
+  padding-bottom: 9px;
   font-family: "Montserrat Alternates";
   font-style: normal;
   font-weight: 400;
@@ -404,7 +510,7 @@ body.dark-mode {
 }
 .hero__input-year::-moz-placeholder {
   color: #7E7E7E;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Montserrat Alternates";
   font-weight: 400;
   display: block;
@@ -413,7 +519,7 @@ body.dark-mode {
 }
 .hero__input-year::placeholder {
   color: #7E7E7E;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Montserrat Alternates";
   font-weight: 400;
   display: block;
@@ -554,7 +660,7 @@ body.dark-mode {
   padding: 10px 20px;
   border-radius: 20px;
   background: #d7d7d7;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   margin-left: 20;
   border: none;
@@ -699,7 +805,7 @@ body.dark-mode {
   padding: 10px 20px;
   border-radius: 20px;
   background: #d7d7d7;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   margin-left: 20;
   border: none;
@@ -827,19 +933,166 @@ body.dark-mode {
   margin-top: 10px;
 }
 
-.dino {
-  padding-top: 36px;
+.dino .container {
   padding-bottom: 36px;
-  text-align: center;
+  padding-top: 36px;
+  position: relative;
+}
+.dino__border {
+  background-color: black;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 368px;
+}
+@media screen and (min-width: 768px) {
+  .dino__border {
+    width: 536px;
+  }
+}
+.dino__start {
+  border-radius: 20px;
+  background-color: #000;
+  padding: 10px;
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  cursor: pointer;
+  font-size: 12px;
+  line-height: normal;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-self: center;
+  margin-top: 15px;
+}
+.dino__start:hover {
+  background-color: #125598;
+  transition-duration: 0.2s;
 }
 .dino__title {
   color: #000;
   font-family: "Montserrat Alternates";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 36px;
+  text-align: center;
+}
+.dino__text {
+  color: #039900;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-top: 15px;
+}
+.dino__game {
+  width: 430px;
+  height: 241px;
+  background-image: url(../../image/ground.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin: auto;
+}
+@media screen and (min-width: 1090px) {
+  .dino__game {
+    width: 720px;
+    height: 241px;
+  }
+}
+.dino__dino {
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  position: relative;
+  top: 195px;
+}
+.dino__btn {
+  border-radius: 20px;
+  background-color: #000;
+  padding: 10px;
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  cursor: pointer;
+  font-size: 12px;
+  line-height: normal;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-self: center;
+  margin-top: 15px;
+}
+.dino__btn:hover {
+  background-color: grey;
+  transition-duration: 0.6s;
+}
+.dino__points {
+  font-size: 10px;
+  position: absolute;
+  left: 12%;
+  top: 60px;
+  color: #000000;
+}
+@media screen and (min-width: 1200px) {
+  .dino__points {
+    font-size: 14px;
+    position: absolute;
+    left: 28%;
+    top: 130px;
+  }
+}
+.dino__cactus {
+  width: 20px;
+  height: 40px;
+  background-size: 15px 25px;
+  background-repeat: no-repeat;
+  transform: scale(1.5);
+  position: relative;
+  top: 150px;
+  left: 410px;
+}
+@media screen and (min-width: 1090px) {
+  .dino__cactus {
+    left: 700px;
+  }
+}
+@keyframes cactusMove {
+  0% {
+    right: 410px;
+    @media screen and (min-width: 1090px) {
+      .dino {
+        left: 700px;
+      }
+    }
+  }
+  100% {
+    left: 2px;
+  }
+}
+.dino .jump {
+  animation: jump 0.65s linear;
+}
+@keyframes jump {
+  0% {
+    top: 190px;
+  }
+  20% {
+    top: 150px;
+  }
+  40% {
+    top: 120px;
+  }
+  60% {
+    top: 110px;
+  }
+  80% {
+    top: 130px;
+  }
+  90% {
+    top: 150px;
+  }
+  100% {
+    top: 190px;
+  }
 }
 
 .socker .container {
@@ -1354,6 +1607,18 @@ body.dark-mode {
   display: flex;
 }
 
+.backdrop-hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.error {
+  border: 2px solid red;
+}
+
 .register {
   position: fixed;
   background: #fff;
@@ -1485,4 +1750,107 @@ body.dark-mode {
 
 .error {
   border: 2px solid red;
+}
+
+.mobilee {
+  background-color: #797777;
+}
+.mobilee__backdropp {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobilee__windoww {
+  padding: 20px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  background: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 150px;
+  padding-top: 15px;
+  width: 78%;
+}
+@media screen and (min-width: 768px) {
+  .mobilee__windoww {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1090px) {
+  .mobilee__windoww {
+    width: 30%;
+  }
+}
+.mobilee__windoww:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.03) translate(-50%, -50%);
+  transition: all 0.25s ease;
+}
+.mobilee__backdropp.is-hidden .mobilee__windoww {
+  transform: translate(0);
+  transform: scale(0);
+}
+
+.dinomodal__btn {
+  position: absolute;
+  top: 3%;
+  left: 90%;
+  transform: rotate(45deg);
+  font-size: 20px;
+  background-color: transparent;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1090px) {
+  .dinomodal__btn {
+    left: 94%;
+    font-size: 25px;
+  }
+}
+.dinomodal__btn:hover {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dinomodal__title {
+  text-align: center;
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  font-family: Montserrat Alternates;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 1090px) {
+  .dinomodal__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
+.dinomodal__text {
+  color: #000000;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  font-family: Montserrat Alternates;
+  padding-left: 10px;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 1090px) {
+  .dinomodal__text {
+    padding-left: 30px;
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=main.css.map */
