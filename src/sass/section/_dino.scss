@@ -1,18 +1,176 @@
 .dino {
-  padding-top: 36px;
-  padding-bottom: 36px;
-  text-align: center;
+  .container {
+    padding-bottom: 36px;
+    padding-top: 36px;
+    position: relative;
+  }
 
+  &__border {
+    background-color: black;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 368px;
+    @media screen and (min-width: 768px) {
+      width: 536px;
+    }
+  }
 
+  &__start {
+    border-radius: 20px;
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+    font-family: "Montserrat Alternates";
+    cursor: pointer;
+    font-size: 12px;
+    line-height: normal;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-self: center;
+    margin-top: 15px;
+  }
+
+  &__start:hover {
+    background-color: #125598;
+    transition-duration: 0.2s;
+}
 
   &__title {
     color: #000;
-
-    font-family: 'Montserrat Alternates';
+    font-family: "Montserrat Alternates";
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  &__text {
+    color: #039900;
+    font-family: "Montserrat Alternates";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+
+  &__game {
+    width: 430px;
+    height: 241px;
+    // border-bottom: 1px solid black;
+    background-image: url(../../image/ground.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: auto;
+
+    @media screen and (min-width: 1090px) {
+      width: 720px;
+      height: 241px;
+    }
+  }
+
+  &__dino {
+    width: 50px;
+    height: 50px;
+    // background-image: url(../img/dinosaur.webp);
+    background-size: 50px 50px;
+    position: relative;
+    top: 195px;
+  } 
+
+  &__btn {
+    border-radius: 20px;
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+    font-family: "Montserrat Alternates";
+    cursor: pointer;
+    font-size: 12px;
+    line-height: normal;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-self: center;
+    margin-top: 15px;
+
+&:hover {
+  background-color: grey;
+  transition-duration: 0.6s;
+}
+
+  }
+
+
+  &__points {
+    font-size: 10px;
+    position: absolute;
+    left: 12%;
+    top: 60px;
+    color: #000000;
+
+    @media screen and (min-width: 1200px){
+        font-size: 14px;
+        position: absolute;
+        left: 28%;
+        top: 130px;
+    }
+}
+
+  &__cactus {
+    width: 20px;
+    height: 40px;
+    // background-image: url(../img/cactus.webp);
+    background-size: 15px 25px;
+    background-repeat: no-repeat;
+    transform: scale(1.5);
+    position: relative;
+    top: 150px;
+    left: 410px;
+    // animation: cactusMove 1.3s infinite linear;
+
+    @media screen and (min-width: 1090px) {
+      left: 700px;
+    }
+  }
+  @keyframes cactusMove {
+    0% {
+      right: 410px;
+
+      @media screen and (min-width: 1090px) {
+        left: 700px;
+      }
+    }
+    100% {
+      left: 2px;
+    }
+  }
+
+  .jump {
+    animation: jump 0.65s linear;
+  }
+  @keyframes jump {
+    0% {
+      top: 190px;
+    }
+    20% {
+      top: 150px;
+    }
+    40% {
+      top: 120px;
+    }
+    60% {
+      top: 110px;
+    }
+    80% {
+      top: 130px;
+    }
+    90% {
+      top: 150px;
+    }
+    100% {
+      top: 190px;
+    }
   }
 }

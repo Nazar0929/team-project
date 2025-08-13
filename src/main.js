@@ -12,3 +12,4 @@ import "./js/scientist";
 import "./js/footer";
 import "./js/header-menu";
 import "./js/header-modal";
+import "./js/dino-modal";
