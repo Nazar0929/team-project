@@ -26,17 +26,19 @@
     }
   
     &__dropdown {
+      width: 100%;
       position: absolute;
       z-index: 10;
       top: 100%;
       left: 0;
       width: 120px;
-      background: #fff;
+      // background: #fff;
       border: 1px solid #000;
       border-radius: 10px;
-      padding: 10px;
+      background-color: transparent;
+      // padding: 10px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       opacity: 0;
       visibility: hidden;
       transform: translateY(-10px);
@@ -44,8 +46,8 @@
     }
   
     &__interactive:hover &__dropdown {
-      opacity: 1;
-      visibility: visible;
+     visibility: visible;
+       opacity: 1;
       transform: translateY(0);
     }
   
@@ -54,14 +56,22 @@
       margin: 5px 0;
       cursor: pointer;
       padding: 5px;
+      background-color: white;
       transition: background-color 0.3s ease;
       font-family: Montserrat Alternates;
+
+      &:hover {
+        background-color: #f1f1f1;
+        width: 100%;
+    }
     }
   
-    &__dropdown-item:hover {
-      background-color: #f0f0f0;
-      border-radius: 5px;
-    }
+    // &__dropdown-item:hover {
+    //   background-color: #f0f0f0;
+    //   border-radius: 5px;
+    // }
+
+ 
   
     &__navigation {
       display: flex;
@@ -70,7 +80,7 @@
     }
   
     &__logo {
-     background-image: url(../img/logo.webp);
+     background-image: url(../image/header-coding.png);
      background-repeat: no-repeat;
      width: 95px;
      height: 39px;
@@ -108,14 +118,28 @@
       font-weight: 400;
       line-height: normal;
     }
-  
+
+
+    &__text.checked &__arrow {
+      transform: rotate(-180deg) translate(0, 50%);
+  }
+
     &__arrow {
-      transform: rotate(180deg);
-      height: 9px;
-      stroke-width: 0.75px;
+      fill: none;
       stroke: #000;
-      margin-left: 8px;
-    }
+      // box-sizing: content-box;
+      // padding-bottom: 2px;
+        height: 9px;
+        stroke-width: 0.75px;
+        margin-left: 8px;
+        align-items: center;
+        transition: transform 0.3s ease;
+  }
+
+  &__arrow.rotated {
+    transform: rotate(180deg);
+}
+  
   
     &__btn {
       width: 40px;
@@ -215,16 +239,18 @@
   
       &-icon {
           display: flex;
-          width: 15.033px;
-          height: 14.667px;
+          width: 20px;
+          height: 20px;
           padding: 3px 3px 3px 3px;
           border-radius: 15.033px;
           position: absolute;
           z-index: 1;
+
   
           &-sun {
               display: block;
               left: 0;
+              
           }
   
           &-moon {
@@ -320,6 +346,38 @@
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  .dark-mode .dino__border {
+    border-top: solid white 1px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .dino__dino {
+    background-image: url(../image/white-dino.webp);
+    width: 50px;
+    height: 50px;
+    
+  }
+  
+  .dark-mode .dino__cactus {
+    background-image: url(../image/white-cactus.webp);
+    transform: scale(3.5);
+    top: 180px;
+    background-color: none;
+  }
+
+  .dark-mode .dinomodal__btn {
+    color: white;
+  }
+
+  .dark-mode .register__close {
+    color: white;
+  }
+
+  .dark-mode .socker__field {
+    border: 2px solid #fff;
+  }
+  
+
   
   .dark-mode p {
     color: white;
@@ -347,15 +405,15 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  // .dark-mode .header__logo {
-  //   background-image: url(../img/white-logo.webp);
-  //   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  // }
+  .dark-mode .header__logo {
+    background-image: url(../image/white-logo.webp);
+    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
   
-  // .dark-mode .footer__box {
-  //   background-image: url(./image/white-logo1.webp);
-  //   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  // }
+  .dark-mode .footer__img {
+    background-image: url(../image/white-logo1.webp);
+    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
   
   .dark-mode .modal {
     background-color: #444444;
@@ -371,8 +429,28 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
+
+  .dark-mode .header__dropdown {
+    border-color: white;
+    background-color: #444444;
+    
+  }
+
+
+  .dark-mode .header__dropdown-item {
+    color: white;
+    background-color: #444444;
+  }
   
+
+  .dark-mode .header__arrow {
+    stroke: #fff
+  }
   
+  .dark-mode .header__dropdown-item:hover {
+    background-color: #616161;
+    width: 100%;
+}
   
   
   
@@ -404,7 +482,7 @@
   }
   
   .dark-mode .header__menu {
-    background-image: url(./image/white-logo.png);
+    background-image: url(../image/white-logo.webp);
     transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
