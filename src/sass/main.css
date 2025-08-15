@@ -117,29 +117,31 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 .header__menu {
+  background-image: url(../image/menu.svg);
   background-repeat: no-repeat;
   width: 95px;
   height: 39px;
 }
 .header__dropdown {
-  width: 100%;
   position: absolute;
   z-index: 10;
   top: 100%;
   left: 0;
   width: 120px;
+  background: #fff;
   border: 1px solid #000;
   border-radius: 10px;
-  background-color: transparent;
+  padding: 10px;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 .header__interactive:hover .header__dropdown {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
 }
 .header__dropdown-item {
@@ -147,13 +149,12 @@ input::-webkit-inner-spin-button {
   margin: 5px 0;
   cursor: pointer;
   padding: 5px;
-  background-color: white;
   transition: background-color 0.3s ease;
   font-family: Montserrat Alternates;
 }
 .header__dropdown-item:hover {
-  background-color: #f1f1f1;
-  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 5px;
 }
 .header__navigation {
   display: flex;
@@ -198,20 +199,12 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   line-height: normal;
 }
-.header__text.checked .header__arrow {
-  transform: rotate(-180deg) translate(0, 50%);
-}
 .header__arrow {
-  fill: none;
-  stroke: #000;
+  transform: rotate(180deg);
   height: 9px;
   stroke-width: 0.75px;
+  stroke: #000;
   margin-left: 8px;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-.header__arrow.rotated {
-  transform: rotate(180deg);
 }
 .header__btn {
   width: 40px;
@@ -261,7 +254,6 @@ input::-webkit-inner-spin-button {
   opacity: 0;
 }
 .header__theme-slider {
-  width: 40px;
   position: absolute;
   top: 0;
   right: 0;
@@ -295,8 +287,8 @@ input::-webkit-inner-spin-button {
 }
 .header__theme-icon {
   display: flex;
-  width: 20px;
-  height: 20px;
+  width: 20.533px;
+  height: 20.667px;
   padding: 3px 3px 3px 3px;
   border-radius: 15.033px;
   position: absolute;
@@ -391,7 +383,7 @@ body.dark-mode {
 .dark-mode .dino__cactus {
   background-image: url(../image/white-cactus.webp);
   transform: scale(3.5);
-  top: 180px;
+  top: 183px;
   background-color: none;
 }
 
