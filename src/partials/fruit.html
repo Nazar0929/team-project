@@ -1,0 +1,27 @@
+<section id="11" class="fruit">
+    <h2 class="fruit__title">Падаючі фрукти</h2>
+    <div id="fruit-block" class="fruit__block">
+        <p id="fruit-score" class="fruit__score">0</p>
+        <div data-fruit="backdrop" class="fruit__backdrop">
+            <button type="button" data-fruit="play" class="fruit__play">Play now</button>
+        </div>
+        <div data-fruit="over" class="fruit__backdrop is-hidden">
+            <p class="fruit__play">Game over</p>
+        </div>
+        <div data-fruit="win" class="fruit__backdrop is-hidden">
+            <p class="fruit__play">You win</p>
+        </div>
+        <svg id="red-apple" class="fruit__apple" width="40" height="44">
+            <use href="./svg/icons.svg#red-apple"></use>
+        </svg>
+        <svg id="gold-apple" class="fruit__apple" width="40" height="44">
+            <use href="./svg/icons.svg#gold-apple"></use>
+        </svg>
+        <svg id="green-apple" class="fruit__apple" width="40" height="44">
+            <use href="./svg/icons.svg#green-apple"></use>
+        </svg>
+            <img id="basket" class="fruit__basket" width="30" height="30" src="./image/fruit-basket.webp" alt="Меч" />
+    </div>
+    <p class="fruit__info">Почніть гру та натискайте ліву та праву стрілки для руху корзини</p>
+    <div class="fruit__line"></div>
+</section>
