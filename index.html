@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <script type="module" crossorigin src="/team-project/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/team-project/assets/index-265f8fa7.css">
+    <link rel="stylesheet" href="/team-project/assets/index-49c8b6ed.css">
   </head>
   <body>
 
@@ -80,11 +80,14 @@
     </div>
     </section>
     <section class="game">
+        <div class="subline">
+    <div class="linee"></div>
+  </div>
   <div class="container game__container">
     <ul class="game__second-list">
       <li class="game__item">Рахунок:</li>
-      <li id="user-score" class="game__item">Ви - 5</li>
-      <li id="computer-score" class="game__item">Комп'ютер - 4</li>
+      <li id="user-score" class="game__item">Ви - 0</li>
+      <li id="computer-score" class="game__item">Комп'ютер - 0</li>
     </ul>
     <h2 class="game__title">Камінь - ножиці - папір</h2>
     <div class="game__div">
@@ -142,13 +145,30 @@
   </div>
 </section>
 
-    <section class="time">
-    <div class="container">
-        <h2 class="time__title">Калькулятор часу</h2>
-        <input type="number" class="time__input">
-        <div class="time__output"></div>
-        <div class="time__output-time"></div>
+    <section class="time" style="color: black;">
+        <div class="dino__border"></div>
+  <div class="container time__container" style="color: black; padding-top: 36px">
+    <h2 class="time__title" style="color: black;">Калькулятор часу</h2>
+    <div class="time__div" style="color: black;">
+<form class="time__form" action="">
+  <div class="time__input-wrapper">
+    <input id="time-input" class="time__input" type="search" placeholder="Введіть число">
+    <button id="time-button" class="time__button" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <circle cx="6.52174" cy="6.52174" r="5.52174" stroke="white" stroke-width="2"></circle>
+        <path d="M14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L14.2929 15.7071ZM11.468 10.0538L10.7609 9.34665L9.34666 10.7609L10.0538 11.468L11.468 10.0538ZM15.7071 14.2929L11.468 10.0538L10.0538 11.468L14.2929 15.7071L15.7071 14.2929Z" fill="white"></path>
+      </svg>
+    </button>
+  </div>
+</form>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="2" viewBox="0 0 100 2" fill="none" style="color: black;">
+      <path d="M0 1H100" stroke="black" stroke-dasharray="2 2" style="color: black;"></path>
+    </svg>
+    <p id="time-text" class="time__text" style="color: black;">0 дн. 0 год. 0 хв. 0 сек.</p>
     </div>
+  </div>
+
 </section>
     <section class="dino" id="dino">
   <div class="container">
