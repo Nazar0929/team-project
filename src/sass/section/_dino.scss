@@ -4,6 +4,18 @@
     padding-top: 36px;
     position: relative;
   }
+  // .dino {
+  //   min-height: 100vh; /* розтягуємо на весь екран */
+  //   display: flex;
+  //   justify-content: center; /* горизонтальне центр */
+  //   align-items: center;     /* вертикальне центр */
+  //   flex-direction: column;  /* щоб заголовок, гра і кнопки йшли зверху вниз */
+  // }
+  
+  // .dino .container {
+  //   text-align: center; /* текст усередині по центру */
+  // }
+  
 
   &__border {
     background-color: black;
@@ -66,6 +78,7 @@
     // background-image: url('../image/ground.png');
     animation: moveMain 2s linear infinite;
     z-index: 1;
+    // animation: groundMove 1s linear infinite;
     
     background-image: url(../image/ground.png);
     background-repeat: no-repeat;
@@ -77,6 +90,15 @@
             // background-position-x: center;
             // background-position-y: 160px;
             background-size: 420px 10px;
+
+            // @keyframes groundMove {
+            //   from {
+            //     transform: translateX(0);
+            //   }
+            //   to {
+            //     transform: translateX(-50%);
+            //   }
+            // }
 
     @media screen and (min-width: 1090px) {
       width: 720px;
@@ -91,6 +113,7 @@
     background-image: url(../image/dinosaur.webp);
     background-size: 50px 50px;
     position: relative;
+    // position: absolute;
     top: 195px;
     // animation: moveMain 2s linear infinite;
     @media (prefers-color-scheme: dark) {
@@ -137,6 +160,8 @@
         top: 130px;
     }
 }
+
+
 
 
 
@@ -220,3 +245,11 @@
     }
   }
 }
+
+
+
+
+
+
+
+

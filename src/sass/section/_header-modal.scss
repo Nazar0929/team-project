@@ -1,6 +1,8 @@
 
 
 
+
+
 .backdrop {
     display: none;
     position: fixed;
@@ -12,6 +14,8 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    
+    
   
     &--visible {
       display: flex;
@@ -19,6 +23,13 @@
   }
 
 .register {
+
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%
+
+
     position: fixed;
     background: #fff;
     display: flex;
@@ -55,6 +66,8 @@
 
 &__container {
     max-width: 500px;
+    
+
 }
 
 &__text {
@@ -162,194 +175,37 @@
 .error {
     border: 2px solid red;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .backdrop {
-//     display: none;
+  
+//   .register {
 //     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background: rgba(0, 0, 0, 0.5);
+//     top: 50%;
+//     left: 50%;
+//     // width: 100%;
+//     // height: 100%;
+//     display: flex;
 //     justify-content: center;
 //     align-items: center;
 //     z-index: 1000;
-//     // background-color: #6464644d;
-//     // -webkit-backdrop-filter: blur(4px);
-//     // backdrop-filter: blur(4px);
-   
-  
-//     &--visible {
-//       display: flex;
-//     }
 //   }
-
-//   .backdrop-hidden {
-//     display: none;
-// }
-
-//  .no-scroll {
-//     overflow: hidden;
-// }
-
-//  .error {
-//     border: 2px solid red;
-//  }
-
-// .register {
-//     position: fixed;
+  
+//   .register__backdrop {
+//     position: absolute;
+//     // width: 100%;
+//     // height: 100%;
+//     background: rgba(0,0,0,0.5);
+//   }
+  
+//   .register__container {
+//     position: relative;
 //     background: #fff;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     flex-direction: column;
-//     text-align: center;
 //     padding: 20px;
-//     z-index: 1001;
-//     width: 576px;
-//     height: 400px;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
+//     z-index: 1;
 //     border-radius: 10px;
-//     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-//     font-family: "Montserrat Alternates", sans-serif;
-   
-
-
-//     @media (max-width: 480px) {
-//         width: 400px;
-//         height: 300px;
-
-//         .register__icon {
-//             width: 20px;
-//             height: 20px;
-//         }
-
-//         .register__input {
-//             width: 119;
-//             height: 25;
-//         }
-//     }
-
-// &__container {
 //     max-width: 500px;
-// }
-
-// &__text {
-//     color: #000;
-
-// text-align: center;
-// font-family: Inter;
-// // font-size: 12px;
-// font-style: normal;
-// font-weight: 400;
-// line-height: normal;
-//     width: 392;
-//     height: 60;
-//     top: 46px;
-//     left: 92px;
-    
-// }
-
-// &__label {
-//     font-size: 16px;
-//     font-family: "Montserrat Alternates", sans-serif;
-//     margin-bottom: 10px;
-//     display: block;
-// }
-
-// &__input {
-//     width: 169;
-//     height: 35;
-//     top: 181px;
-//     left: 204px;
-//     gap: 10px;
-//     border-radius: 20px;
-//     padding-top: 10px;
-//     padding-right: 90px;
-//     padding-bottom: 10px;
-//     padding-left: 10px;
-    
-// }
-
-// &__box {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
-
-// &__button {
-//     margin-top: 15px;
-//     width: 105px;
-//     height: 35px;
-//     border-radius: 20px;
-//     background: #000;
-//     color: #fff;
-//     font-size: 16px;
-//     font-family: "Montserrat Alternates", sans-serif;
-//     cursor: pointer;
-//     border: none;
-//     transition: 0.3s;
-// }
-
-// &__button:hover {
-//     background: #444;
-// }
-
-// &__text {
-//     margin-bottom: 60px;
-// }
-
-// &__close {
+//     text-align: center;
+//   }
+  
+//   .register__close {
 //     position: absolute;
 //     top: 10px;
 //     right: 10px;
@@ -357,156 +213,7 @@
 //     background: none;
 //     border: none;
 //     cursor: pointer;
-// }
-
-// &__icon {
-//     position: absolute;
-//     width: 40px;
-//     height: 40px;
-// }
-
-// &__icon--left-top {
-//     top: 200px;
-//     left: 5%;
-// }
-
-// &__icon--left-bottom {
-//     bottom: 10%;
-//     left: 5%;
-// }
-
-// &__icon--right-top {
-//     top: 200px;
-//     right: 5%;
-// }
-
-// &__icon--right-bottom {
-//     bottom: 10%;
-//     right: 5%;
-// }
-// }
-
-
-
-
-
-// // .register__backdrop {
-// //     position: fixed;
-// //     inset: 0;
-// //     background-color: #6464644d;
-// //          -webkit-backdrop-filter: blur(4px);
-// //          backdrop-filter: blur(4px);
-// //     display: flex;
-// //     justify-content: center;
-// //     align-items: center;
-// //     z-index: 1000;
-// // }
-
-// // .backdrop-hidden {
-// //     display: none;
-// // }
-
-// // .no-scroll {
-// //     overflow: hidden;
-// // }
-
-// // .error {
-// //     border: 2px solid red;
-// // }
-
-// // .register__close {
-// //     position: absolute;
-// //     top: 10px;
-// //     right: 10px;
-// //     font-size: 24px;
-// //     background: none;
-// //     border: none;
-// //     cursor: pointer;
-// // }
-
-// // .register__icon {
-// //     position: absolute;
-// //     width: 40px;
-// //     height: 40px;
-// // }
-
-// // .register__icon--left-top { top: 200px; left: 5%; }
-// // .register__icon--left-bottom { bottom: 10%; left: 5%; }
-// // .register__icon--right-top { top: 200px; right: 5%; }
-// // .register__icon--right-bottom { bottom: 10%; right: 5%; }
-
-
-
-
-// // .register {
-// //     position: fixed;
-// //     inset: 0;
-// //     background-color: rgba(100, 100, 100, 0.3);
-// //     backdrop-filter: blur(4px);
-// //     display: flex;
-// //     justify-content: center;
-// //     align-items: center;
-// //     z-index: 1000;
-// // }
-
-// // .backdrop-hidden {
-// //     display: none;
-// // }
-
-// // .no-scroll {
-// //     overflow: hidden;
-// // }
-
-// // .register {
-// //     position: fixed;
-// //     background: #fff;
-// //     display: flex;
-// //     align-items: center;
-// //     justify-content: center;
-// //     flex-direction: column;
-// //     text-align: center;
-// //     padding: 20px;
-// //     z-index: 1001;
-// //     width: 576px;
-// //     height: 400px;
-// //     top: 50%;
-// //     left: 50%;
-// //     transform: translate(-50%, -50%);
-// //     border-radius: 10px;
-// //     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-// //     font-family: "Montserrat Alternates", sans-serif;
-// // }
-
-// // .register__close {
-// //     position: absolute;
-// //     top: 10px;
-// //     right: 10px;
-// //     font-size: 24px;
-// //     background: none;
-// //     border: none;
-// //     cursor: pointer;
-// // }
-
-// // .register__button {
-// //     margin-top: 15px;
-// //     width: 105px;
-// //     height: 35px;
-// //     border-radius: 20px;
-// //     background: #000;
-// //     color: #fff;
-// //     font-size: 16px;
-// //     cursor: pointer;
-// //     border: none;
-// //     transition: 0.3s;
-// // }
-
-// // .register__button:hover {
-// //     background: #444;
-// // }
-
-// // .register__input.error {
-// //     border: 2px solid red;
-// // }
-
+//   }
+  
 
 

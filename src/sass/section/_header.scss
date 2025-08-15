@@ -1,290 +1,280 @@
 .header {
-    background: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99999;
-   
-    .container {
-      position: relative;
-      
-    }
-    &__interactive {
-      position: relative;
-      cursor: pointer;  
-    }
-  
-    &__menu {
-      // background-image: url(../image/header-coding.png);
-      background-repeat: no-repeat;
-      width: 95px;
-      height: 39px;
-      // display: block;
-    }
-  
-    &__dropdown {
-      width: 100%;
-      position: absolute;
-      z-index: 10;
-      top: 100%;
-      left: 0;
-      width: 120px;
-      // background: #fff;
-      border: 1px solid #000;
-      border-radius: 10px;
-      background-color: transparent;
-      // padding: 10px;
-      text-align: center;
-      // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-    }
-  
-    &__interactive:hover &__dropdown {
-     visibility: visible;
-       opacity: 1;
-      transform: translateY(0);
-    }
-  
-    &__dropdown-item {
-      font-size: 12px;
-      margin: 5px 0;
-      cursor: pointer;
-      padding: 5px;
-      background-color: white;
-      transition: background-color 0.3s ease;
-      font-family: Montserrat Alternates;
-
-      &:hover {
-        background-color: #f1f1f1;
-        width: 100%;
-    }
-    }
-  
-    // &__dropdown-item:hover {
-    //   background-color: #f0f0f0;
-    //   border-radius: 5px;
-    // }
-
+  background: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
  
-  
-    &__navigation {
+  .container {
+    position: relative;
+    
+  }
+  &__interactive {
+    position: relative;
+    cursor: pointer;  
+  }
+
+  &__menu {
+    background-image: url(../image/menu.svg);
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 39px;
+
+  }
+
+  &__dropdown {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    width: 120px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  }
+
+  &__interactive:hover &__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__dropdown-item {
+    font-size: 12px;
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+    font-family: Montserrat Alternates;
+  }
+
+  &__dropdown-item:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+   background-image: url(../image/header-coding.png);
+   background-repeat: no-repeat;
+   width: 95px;
+   height: 39px;
+   margin-right: 180px;
+
+   @media screen and (min-width: 768px) {
+    margin-right: 300px;
+  }
+
+   @media screen and (min-width: 1090px) {
+    margin-right: 81px;
+  }
+
+  }
+
+  &__list {
+   display: none;
+
+    @media screen and (min-width: 1090px) {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      margin-right: 350px;
+      gap: 50px;
     }
-  
-    &__logo {
-     background-image: url(../image/header-coding.png);
-     background-repeat: no-repeat;
-     width: 95px;
-     height: 39px;
-     margin-right: 180px;
-  
-     @media screen and (min-width: 768px) {
-      margin-right: 300px;
-    }
-  
-     @media screen and (min-width: 1090px) {
-      margin-right: 81px;
-    }
-  
-    }
-  
-    &__list {
-     display: none;
-  
-      @media screen and (min-width: 1090px) {
-        display: flex;
-        margin-right: 350px;
-        gap: 50px;
-      }
-    }
-  
-    &__item {
-      display: flex;
-      align-items: center;
-    }
-  
-    &__text {
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    color: #000;
+    font-family: Montserrat Alternates;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__arrow {
+    transform: rotate(180deg);
+    height: 9px;
+    stroke-width: 0.75px;
+    stroke: #000;
+    margin-left: 8px;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 20px;
+    border-radius: 11px;
+    background: #7a7a7a;
+    margin-right: 51px;
+    padding: 0;
+  }
+
+  &__sun {
+    width: 20.5px;
+    height: 20px;
+    border-radius: 11px;
+  }
+
+  &__greetings {
+   display: none;
+
+    @media screen and (min-width: 1090px) {
+      display: block;
       color: #000;
-      font-family: Montserrat Alternates;
+      text-align: right;
+      font-family: "Montserrat Alternates";
       font-size: 12px;
       font-weight: 400;
       line-height: normal;
     }
-
-
-    &__text.checked &__arrow {
-      transform: rotate(-180deg) translate(0, 50%);
   }
 
-    &__arrow {
-      fill: none;
-      stroke: #000;
-      // box-sizing: content-box;
-      // padding-bottom: 2px;
-        height: 9px;
-        stroke-width: 0.75px;
-        margin-left: 8px;
-        align-items: center;
-        transition: transform 0.3s ease;
-  }
+  &__theme {
+    display: inline-flex;
+    justify-content: flex-end;
+    position: relative;
 
-  &__arrow.rotated {
-    transform: rotate(180deg);
-}
-  
-  
-    &__btn {
-      width: 40px;
-      height: 20px;
-      border-radius: 11px;
-      background: #7a7a7a;
-      margin-right: 51px;
-      padding: 0;
-    }
-  
-    &__sun {
-      width: 20.5px;
-      height: 20px;
-      border-radius: 11px;
-    }
-  
-    &__greetings {
-     display: none;
-  
-      @media screen and (min-width: 1090px) {
-        display: block;
-        color: #000;
-        text-align: right;
-        font-family: "Montserrat Alternates";
-        font-size: 12px;
-        font-weight: 400;
-        line-height: normal;
-      }
-    }
-  
-    &__theme {
-      display: inline-flex;
-      justify-content: flex-end;
-      position: relative;
-  
-      width: 40px;
-      height: 20px;
-      margin-right: 1px;
-  
-      border-radius: 11px;
-      background: gray;
-  
-      @media screen and (min-width: 1090px) {
-     margin-right: auto;
-      }
-  
-      &-changer {
-          width: 0;
-          height: 0;
-          opacity: 0;
-      }
-  
-      &-slider {
-        width: 40px;
-        // height: 22px;
+    width: 40px;
+    height: 20px;
+    margin-right: 1px;
 
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-  
-          cursor: pointer;
-          border-radius: 11px;
-          background-color: rgb(153, 150, 150);
-          transition: 0.3s;
-          
-      }
-  
-      &-slider::before {
-          content: "";
-  
-          position: absolute;
-          left: 0;
-          bottom: 0;
-  
-          width: 20.5px;
-          height: 20px;
-          cursor: pointer;
-  
-          border: solid 0.5px black;
-          border-radius: 50%;
-          background-color: white;
-          transition: 0.3s;
-      }
-  
-      &-changer:checked + &-slider::before {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-  
-          width: 20.5px;
-  
-          transform: translateX(20px);
-          background-color: black;
-      }
-  
-      &-icon {
-          display: flex;
-          width: 20px;
-          height: 20px;
-          padding: 3px 3px 3px 3px;
-          border-radius: 15.033px;
-          position: absolute;
-          z-index: 1;
+    border-radius: 11px;
+    background: gray;
 
-  
-          &-sun {
-              display: block;
-              left: 0;
-              
-          }
-  
-          &-moon {
-              display: none;
-              right: 0;
-          }
-      }
-  
-      &-changer:checked + &-slider > &-icon-sun {
-          display: none;
-      }
-  
-      &-changer:checked + &-slider > &-icon-moon {
-          display: block;
-      }
+    @media screen and (min-width: 1090px) {
+   margin-right: auto;
     }
-  
-    &__menu {
-      width: 45px;
+
+    &-changer {
+        width: 0;
+        height: 0;
+        opacity: 0;
     }
-  
-    &__burger {
-      background-color: none;
-  
-      @media screen and (min-width: 1090px) {
+
+    &-slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        cursor: pointer;
+        border-radius: 11px;
+        background-color: rgb(153, 150, 150);
+        transition: 0.3s;
+        
+    }
+
+    &-slider::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 20.5px;
+        height: 20px;
+        cursor: pointer;
+
+        border: solid 0.5px black;
+        border-radius: 50%;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    &-changer:checked + &-slider::before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        width: 20.5px;
+
+        transform: translateX(20px);
+        background-color: black;
+    }
+
+    &-icon {
+        display: flex;
+        width: 20.533px;
+        height: 20.667px;
+        padding: 3px 3px 3px 3px;
+        border-radius: 15.033px;
+        position: absolute;
+        z-index: 1;
+
+        &-sun {
+            display: block;
+            left: 0;
+        }
+
+        &-moon {
+            display: none;
+            right: 0;
+        }
+    }
+
+    &-changer:checked + &-slider > &-icon-sun {
         display: none;
-      }
+    }
+
+    &-changer:checked + &-slider > &-icon-moon {
+        display: block;
     }
   }
-  
-  
-  .all {
-    padding-bottom: 80px;
+
+  &__menu {
+    width: 45px;
   }
+
+  &__burger {
+    background-color: none;
+
+    @media screen and (min-width: 1090px) {
+      display: none;
+    }
+  }
+}
+
+
+.all {
+  padding-bottom: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -361,7 +351,7 @@
   .dark-mode .dino__cactus {
     background-image: url(../image/white-cactus.webp);
     transform: scale(3.5);
-    top: 180px;
+    top: 183px;
     background-color: none;
   }
 
