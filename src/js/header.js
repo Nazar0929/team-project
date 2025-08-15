@@ -1,15 +1,7 @@
 const themeChanger = document.querySelector(".header__theme-changer");
-const interactiveItem = document.querySelector(".header__interactive");
-const arrowIcon = interactiveItem.querySelector(".header__arrow");
-
-interactiveItem.addEventListener("click", () => {
-    arrowIcon.classList.toggle("rotated");
-});
-
 
 function toggleTheme() {
   document.body.classList.toggle("dark-mode");
-// document.body.style.backgroundColor = "red"
 }
 
 themeChanger.addEventListener("click", toggleTheme);
@@ -82,7 +74,5 @@ const game = document.getElementById("game")
 const socker = document.getElementById("socker")
 const acquaintance = document.getElementById("acquaintance");
 const science = document.getElementById("science");
-
-
 
 

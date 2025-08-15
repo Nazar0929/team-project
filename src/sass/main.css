@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   color: none;
   padding: 0;
@@ -15,7 +16,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 p, h1, h2, h3, h4 {
@@ -117,29 +117,31 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 .header__menu {
+  background-image: url(../image/menu.svg);
   background-repeat: no-repeat;
   width: 95px;
   height: 39px;
 }
 .header__dropdown {
-  width: 100%;
   position: absolute;
   z-index: 10;
   top: 100%;
   left: 0;
   width: 120px;
+  background: #fff;
   border: 1px solid #000;
   border-radius: 10px;
-  background-color: transparent;
+  padding: 10px;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 .header__interactive:hover .header__dropdown {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
 }
 .header__dropdown-item {
@@ -147,13 +149,12 @@ input::-webkit-inner-spin-button {
   margin: 5px 0;
   cursor: pointer;
   padding: 5px;
-  background-color: white;
   transition: background-color 0.3s ease;
   font-family: Montserrat Alternates;
 }
 .header__dropdown-item:hover {
-  background-color: #f1f1f1;
-  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 5px;
 }
 .header__navigation {
   display: flex;
@@ -198,20 +199,12 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   line-height: normal;
 }
-.header__text.checked .header__arrow {
-  transform: rotate(-180deg) translate(0, 50%);
-}
 .header__arrow {
-  fill: none;
-  stroke: #000;
+  transform: rotate(180deg);
   height: 9px;
   stroke-width: 0.75px;
+  stroke: #000;
   margin-left: 8px;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-.header__arrow.rotated {
-  transform: rotate(180deg);
 }
 .header__btn {
   width: 40px;
@@ -261,7 +254,6 @@ input::-webkit-inner-spin-button {
   opacity: 0;
 }
 .header__theme-slider {
-  width: 40px;
   position: absolute;
   top: 0;
   right: 0;
@@ -295,8 +287,8 @@ input::-webkit-inner-spin-button {
 }
 .header__theme-icon {
   display: flex;
-  width: 20px;
-  height: 20px;
+  width: 20.533px;
+  height: 20.667px;
   padding: 3px 3px 3px 3px;
   border-radius: 15.033px;
   position: absolute;
@@ -391,7 +383,7 @@ body.dark-mode {
 .dark-mode .dino__cactus {
   background-image: url(../image/white-cactus.webp);
   transform: scale(3.5);
-  top: 180px;
+  top: 183px;
   background-color: none;
 }
 
@@ -666,13 +658,13 @@ body.dark-mode {
   }
 }
 
-.game {
+.game__container {
   padding-top: 36px;
   padding-bottom: 36px;
 }
 .game__second-list {
   position: absolute;
-  top: 725px;
+  top: 450px;
   margin-left: 740px;
 }
 .game__title {
@@ -720,14 +712,36 @@ body.dark-mode {
 .subline {
   display: flex;
   justify-content: center;
-  margin-top: 36px;
 }
 
 .line {
   display: inherit;
+  height: 2px;
+  width: 536px;
+  background-color: #000;
+}
+
+.linee {
+  display: inherit;
   height: 1px;
   width: 536px;
   background-color: #000;
+}
+
+.dark-mode .line {
+  background-color: white;
+  display: inherit;
+  height: 2px;
+  width: 536px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .linee {
+  background-color: white;
+  display: inherit;
+  height: 1px;
+  width: 536px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .numbers .container {
@@ -918,6 +932,52 @@ body.dark-mode {
   line-height: 1.25;
   text-align: center;
   margin-top: 10px;
+}
+
+.time {
+  padding-bottom: 36px;
+}
+.time__title {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+.time .time__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 33px;
+  margin-top: 36px;
+}
+.time .time__input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.time .time__input {
+  padding: 10px 40px 10px 10px; /* справа место под кнопку */
+  border-radius: 20px;
+  border: none;
+  background: #D7D7D7;
+  width: 200px;
+}
+.time .time__button {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  border-radius: 0 20px 20px 0;
+  background: #000;
+  transform: translateY(-50%);
+  background: #000;
+  border: none;
+  padding: 11px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dino .container {
