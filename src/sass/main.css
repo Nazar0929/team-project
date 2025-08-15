@@ -1379,7 +1379,7 @@ body.dark .football__line {
   background-color: red;
 }
 body.dark .football__info {
-  color: red;
+  color: rgb(255, 255, 255);
 }
 
 .numbers .container {
