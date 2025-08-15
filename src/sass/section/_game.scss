@@ -1,11 +1,14 @@
 .game {
-    padding-top: 36px;
-    padding-bottom: 36px;
 
+
+    &__container {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
 
     &__second-list {
 position: absolute;
-    top: 725px;
+    top: 450px;
     margin-left: 740px;
     }
 
@@ -61,12 +64,36 @@ width: 300px;
 .subline {
     display: flex;
     justify-content: center;
-    margin-top: 36px;
+
 }
 
 .line {
 display: inherit;
-    height: 1px;
+    height: 2px;
     width: 536px;
     background-color: #000;
 }
+
+.linee {
+display: inherit;
+    height: 1px;
+    width: 536px;
+    background-color: #000;
+
+}
+
+  .dark-mode .line {
+    background-color: white;
+    display: inherit;
+    height: 2px;
+    width: 536px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+    .dark-mode .linee {
+    background-color: white;
+    display: inherit;
+    height: 1px;
+    width: 536px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }

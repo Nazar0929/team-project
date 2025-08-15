@@ -1,0 +1,60 @@
+.time {
+
+  padding-bottom: 36px;
+
+
+
+
+  &__title {
+    color: #000;
+    font-family: 'Montserrat Alternates';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+
+  }
+
+  .time__div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 33px;
+    margin-top: 36px;
+  }
+
+  .time__input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.time__input {
+  padding: 10px 40px 10px 10px; /* справа место под кнопку */
+  border-radius: 20px;
+  border: none;
+  background: #D7D7D7;
+  width: 200px;
+}
+
+.time__button {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  border-radius: 0 20px 20px 0;
+background: #000;
+  transform: translateY(-50%);
+  background: #000;
+  border: none;
+  padding: 11px;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+}

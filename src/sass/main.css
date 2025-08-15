@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   color: none;
   padding: 0;
@@ -15,7 +16,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 p, h1, h2, h3, h4 {
@@ -658,13 +658,13 @@ body.dark-mode {
   }
 }
 
-.game {
+.game__container {
   padding-top: 36px;
   padding-bottom: 36px;
 }
 .game__second-list {
   position: absolute;
-  top: 725px;
+  top: 450px;
   margin-left: 740px;
 }
 .game__title {
@@ -712,14 +712,36 @@ body.dark-mode {
 .subline {
   display: flex;
   justify-content: center;
-  margin-top: 36px;
 }
 
 .line {
   display: inherit;
+  height: 2px;
+  width: 536px;
+  background-color: #000;
+}
+
+.linee {
+  display: inherit;
   height: 1px;
   width: 536px;
   background-color: #000;
+}
+
+.dark-mode .line {
+  background-color: white;
+  display: inherit;
+  height: 2px;
+  width: 536px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .linee {
+  background-color: white;
+  display: inherit;
+  height: 1px;
+  width: 536px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .numbers .container {
@@ -910,6 +932,52 @@ body.dark-mode {
   line-height: 1.25;
   text-align: center;
   margin-top: 10px;
+}
+
+.time {
+  padding-bottom: 36px;
+}
+.time__title {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+.time .time__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 33px;
+  margin-top: 36px;
+}
+.time .time__input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.time .time__input {
+  padding: 10px 40px 10px 10px; /* справа место под кнопку */
+  border-radius: 20px;
+  border: none;
+  background: #D7D7D7;
+  width: 200px;
+}
+.time .time__button {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  border-radius: 0 20px 20px 0;
+  background: #000;
+  transform: translateY(-50%);
+  background: #000;
+  border: none;
+  padding: 11px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dino .container {
