@@ -1,5 +1,6 @@
 .game {
 
+    position: relative;
 
     &__container {
         padding-top: 36px;
@@ -8,7 +9,7 @@
 
     &__second-list {
 position: absolute;
-    top: 450px;
+    top: 100px;
     margin-left: 740px;
     }
 
@@ -76,7 +77,7 @@ display: inherit;
 
 .linee {
 display: inherit;
-    height: 1px;
+    height: 1.5px;
     width: 536px;
     background-color: #000;
 

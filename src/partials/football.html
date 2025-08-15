@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,3 +21,64 @@
     <script type="module" src="./js/football.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+ -->
+
+<section id="7" class="football">
+  <h2 class="football__title">Футбол</h2>
+  <div id="football-field" class="football__field">
+    <div data-football="backdrop" class="football__backdrop">
+      <button data-football="play" class="football__play">PLay now</button>
+    </div>
+    <div data-football="end" class="football__backdrop is-hidden">
+      <p class="football__play">
+        Ти забив <span id="football-output"></span> голів
+      </p>
+      <button data-football="restart" class="football__play">Restart</button>
+    </div>
+    <p id="football-count" class="football__count">0</p>
+    <p id="football-time" class="football__time">0:30</p>
+      <img
+        id="football-ball"
+        class="football__ball"
+        width="50"
+        height="50"
+        src="../imgs/footbalimg.png"
+        alt="М'ячик"
+      />
+      <img
+        id="football-gates"
+        class="football__img"
+        width="50"
+        height="50"
+        src="../imgs/football-gates@1x.webp"
+        alt="Ворота"
+      />
+  </div>
+  <div class="football__buts">
+  <button type="button" id="table-btn" class="football__btn">Переглянути результати</button>
+  </div>
+  <div data-football="table" class="backdrop is-hidden">
+    <div class="football__modal">
+      <button id="table-close-btn" class="football__close">
+        <svg class="football__dagger" width="15" height="15">
+          <use href="./svg/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <h2 class="football__subtitle">Таблиця результатів</h2>
+      <div id="football-table-list" class="football__table">
+        <p class="football__text">Ще не має результатів</p>
+        <!-- <div class="football__row">
+          <h3 class="football__header">Анна</h3>
+          <p class="football__score">25</p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <p class="football__info">Почніть гру та забийте як найбільше голів</p>
+</section>

@@ -1,12 +1,11 @@
 .time {
 
-  padding-bottom: 36px;
 
 
 
 
   &__title {
-    color: #000;
+
     font-family: 'Montserrat Alternates';
     font-size: 16px;
     font-style: normal;
@@ -22,6 +21,7 @@
     justify-content: center;
     gap: 33px;
     margin-top: 36px;
+    padding-bottom: 36px;
   }
 
   .time__input-wrapper {
@@ -35,6 +35,7 @@
   border: none;
   background: #D7D7D7;
   width: 200px;
+  
 }
 
 .time__button {
