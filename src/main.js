@@ -9,6 +9,7 @@ import "./js/football";
 import "./js/threenum";
 import "./js/photo";
 import "./js/scientist";
+import "./js/fruit";
 import "./js/footer";
 import "./js/header-menu";
 import "./js/header-modal";
