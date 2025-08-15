@@ -2,7 +2,6 @@ const themeChanger = document.querySelector(".header__theme-changer");
 
 function toggleTheme() {
   document.body.classList.toggle("dark-mode");
-// document.body.style.backgroundColor = "red"
 }
 
 themeChanger.addEventListener("click", toggleTheme);
@@ -75,7 +74,5 @@ const game = document.getElementById("game")
 const socker = document.getElementById("socker")
 const acquaintance = document.getElementById("acquaintance");
 const science = document.getElementById("science");
-
-
 
 

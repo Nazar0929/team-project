@@ -4,6 +4,18 @@
     padding-top: 36px;
     position: relative;
   }
+  // .dino {
+  //   min-height: 100vh; /* розтягуємо на весь екран */
+  //   display: flex;
+  //   justify-content: center; /* горизонтальне центр */
+  //   align-items: center;     /* вертикальне центр */
+  //   flex-direction: column;  /* щоб заголовок, гра і кнопки йшли зверху вниз */
+  // }
+  
+  // .dino .container {
+  //   text-align: center; /* текст усередині по центру */
+  // }
+  
 
   &__border {
     background-color: black;
@@ -58,28 +70,59 @@
 
 
   &__game {
-    width: 430px;
-    height: 241px;
+    // width: 430px;
+    // height: 241px;
     // border-bottom: 1px solid black;
-    background-image: url(../../image/ground.png);
+    // width: 200%;
+    // height: 40px;
+    // background-image: url('../image/ground.png');
+    animation: moveMain 2s linear infinite;
+    z-index: 1;
+    // animation: groundMove 1s linear infinite;
+    
+    background-image: url(../image/ground.png);
     background-repeat: no-repeat;
     background-position: bottom;
-    margin: auto;
+    margin: 0 auto;
+            width: 720px;
+            height: 241px;
+            background-repeat: repeat-x;
+            // background-position-x: center;
+            // background-position-y: 160px;
+            background-size: 420px 10px;
+
+            // @keyframes groundMove {
+            //   from {
+            //     transform: translateX(0);
+            //   }
+            //   to {
+            //     transform: translateX(-50%);
+            //   }
+            // }
 
     @media screen and (min-width: 1090px) {
       width: 720px;
       height: 241px;
     }
   }
+  
 
   &__dino {
     width: 50px;
     height: 50px;
-    // background-image: url(../img/dinosaur.webp);
+    background-image: url(../image/dinosaur.webp);
     background-size: 50px 50px;
     position: relative;
+    // position: absolute;
     top: 195px;
+    // animation: moveMain 2s linear infinite;
+    @media (prefers-color-scheme: dark) {
+      background-image: url(../image/white-dino.webp);
+      width: 50px;
+    height: 50px;
+    }
   } 
+
 
   &__btn {
     border-radius: 20px;
@@ -118,17 +161,45 @@
     }
 }
 
+
+
+
+
+
+
+// @keyframes moveMain { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+// @keyframes moveSmall { 0% { transform: translateX(0); } 100% { transform: translateX(-25%); } }
+
+
+
+
+
+
+
+
+
+
+
+
+
   &__cactus {
-    width: 20px;
+    width: 50px;
     height: 40px;
-    // background-image: url(../img/cactus.webp);
+    background-image: url(../image/cactus.webp);
     background-size: 15px 25px;
     background-repeat: no-repeat;
-    transform: scale(1.5);
+    transform: scale(2);
     position: relative;
-    top: 150px;
+    top: 165px;
     left: 410px;
+    // animation: moveSmall 1s linear infinite;
     // animation: cactusMove 1.3s infinite linear;
+
+    @media (prefers-color-scheme: dark) {
+      width: 20px;
+      height: 40px;
+      background-image: url(../image/white-cactus.webp);
+    }
 
     @media screen and (min-width: 1090px) {
       left: 700px;
@@ -174,3 +245,11 @@
     }
   }
 }
+
+
+
+
+
+
+
+

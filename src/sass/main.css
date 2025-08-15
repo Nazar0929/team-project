@@ -117,6 +117,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 .header__menu {
+  background-image: url(../image/menu.svg);
   background-repeat: no-repeat;
   width: 95px;
   height: 39px;
@@ -161,7 +162,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 .header__logo {
-  background-image: url(../img/logo.webp);
+  background-image: url(../image/header-coding.png);
   background-repeat: no-repeat;
   width: 95px;
   height: 39px;
@@ -253,7 +254,6 @@ input::-webkit-inner-spin-button {
   opacity: 0;
 }
 .header__theme-slider {
-  width: 40px;
   position: absolute;
   top: 0;
   right: 0;
@@ -287,8 +287,8 @@ input::-webkit-inner-spin-button {
 }
 .header__theme-icon {
   display: flex;
-  width: 15.033px;
-  height: 14.667px;
+  width: 20.533px;
+  height: 20.667px;
   padding: 3px 3px 3px 3px;
   border-radius: 15.033px;
   position: absolute;
@@ -369,6 +369,36 @@ body.dark-mode {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.dark-mode .dino__border {
+  border-top: solid white 1px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .dino__dino {
+  background-image: url(../image/white-dino.webp);
+  width: 50px;
+  height: 50px;
+}
+
+.dark-mode .dino__cactus {
+  background-image: url(../image/white-cactus.webp);
+  transform: scale(3.5);
+  top: 183px;
+  background-color: none;
+}
+
+.dark-mode .dinomodal__btn {
+  color: white;
+}
+
+.dark-mode .register__close {
+  color: white;
+}
+
+.dark-mode .socker__field {
+  border: 2px solid #fff;
+}
+
 .dark-mode p {
   color: white;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -394,6 +424,16 @@ body.dark-mode {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.dark-mode .header__logo {
+  background-image: url(../image/white-logo.webp);
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .footer__img {
+  background-image: url(../image/white-logo1.webp);
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .dark-mode .modal {
   background-color: #444444;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -407,6 +447,25 @@ body.dark-mode {
 .dark-mode span {
   color: white;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .header__dropdown {
+  border-color: white;
+  background-color: #444444;
+}
+
+.dark-mode .header__dropdown-item {
+  color: white;
+  background-color: #444444;
+}
+
+.dark-mode .header__arrow {
+  stroke: #fff;
+}
+
+.dark-mode .header__dropdown-item:hover {
+  background-color: #616161;
+  width: 100%;
 }
 
 .dark-mode .game__description {
@@ -430,7 +489,7 @@ body.dark-mode {
 }
 
 .dark-mode .header__menu {
-  background-image: url(./image/white-logo.png);
+  background-image: url(../image/white-logo.webp);
   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -975,12 +1034,16 @@ body.dark-mode {
   margin-top: 15px;
 }
 .dino__game {
-  width: 430px;
-  height: 241px;
-  background-image: url(../../image/ground.png);
+  animation: moveMain 2s linear infinite;
+  z-index: 1;
+  background-image: url(../image/ground.png);
   background-repeat: no-repeat;
   background-position: bottom;
-  margin: auto;
+  margin: 0 auto;
+  width: 720px;
+  height: 241px;
+  background-repeat: repeat-x;
+  background-size: 420px 10px;
 }
 @media screen and (min-width: 1090px) {
   .dino__game {
@@ -991,9 +1054,17 @@ body.dark-mode {
 .dino__dino {
   width: 50px;
   height: 50px;
+  background-image: url(../image/dinosaur.webp);
   background-size: 50px 50px;
   position: relative;
   top: 195px;
+}
+@media (prefers-color-scheme: dark) {
+  .dino__dino {
+    background-image: url(../image/white-dino.webp);
+    width: 50px;
+    height: 50px;
+  }
 }
 .dino__btn {
   border-radius: 20px;
@@ -1029,14 +1100,22 @@ body.dark-mode {
   }
 }
 .dino__cactus {
-  width: 20px;
+  width: 50px;
   height: 40px;
+  background-image: url(../image/cactus.webp);
   background-size: 15px 25px;
   background-repeat: no-repeat;
-  transform: scale(1.5);
+  transform: scale(2);
   position: relative;
-  top: 150px;
+  top: 165px;
   left: 410px;
+}
+@media (prefers-color-scheme: dark) {
+  .dino__cactus {
+    width: 20px;
+    height: 40px;
+    background-image: url(../image/white-cactus.webp);
+  }
 }
 @media screen and (min-width: 1090px) {
   .dino__cactus {
@@ -1527,6 +1606,7 @@ body.dark-mode {
   width: 165px;
   height: 70px;
   flex-shrink: 0;
+  background-image: url(../image/coding.png);
 }
 .footer__box {
   display: flex;
@@ -1665,7 +1745,6 @@ body.dark-mode {
 .mobile__window {
   display: flex;
   flex-direction: column;
-  background: #858383;
   flex-shrink: 0;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -1676,10 +1755,6 @@ body.dark-mode {
   height: 120px;
   padding-top: 15px;
   width: 100%;
-}
-.mobile__backdrop.is-hidden .mobile__window {
-  transform: translate(0);
-  transform: scale(0);
 }
 @media screen and (min-width: 768px) {
   .mobile {
@@ -1740,18 +1815,6 @@ body.dark-mode {
   display: flex;
 }
 
-.backdrop-hidden {
-  display: none;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-.error {
-  border: 2px solid red;
-}
-
 .register {
   position: fixed;
   background: #fff;
@@ -1789,12 +1852,6 @@ body.dark-mode {
   max-width: 500px;
 }
 .register__text {
-  color: #000;
-  text-align: center;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   width: 392;
   height: 60;
   top: 46px;
