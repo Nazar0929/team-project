@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <script type="module" crossorigin src="/team-project/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/team-project/assets/index-49c8b6ed.css">
+    <link rel="stylesheet" href="/team-project/assets/index-26247437.css">
   </head>
   <body>
 
@@ -360,11 +360,38 @@
   </div>
 </section>
 
+    <section id="11" class="fruit">
+    <h2 class="fruit__title">Падаючі фрукти</h2>
+    <div id="fruit-block" class="fruit__block">
+        <p id="fruit-score" class="fruit__score">0</p>
+        <div data-fruit="backdrop" class="fruit__backdrop">
+            <button type="button" data-fruit="play" class="fruit__play">Play now</button>
+        </div>
+        <div data-fruit="over" class="fruit__backdrop is-hidden">
+            <p class="fruit__play">Game over</p>
+        </div>
+        <div data-fruit="win" class="fruit__backdrop is-hidden">
+            <p class="fruit__play">You win</p>
+        </div>
+        <svg id="red-apple" class="fruit__apple" width="40" height="44">
+            <use href="/team-project/assets/icons-029903d8.svg#red-apple"></use>
+        </svg>
+        <svg id="gold-apple" class="fruit__apple" width="40" height="44">
+            <use href="/team-project/assets/icons-029903d8.svg#gold-apple"></use>
+        </svg>
+        <svg id="green-apple" class="fruit__apple" width="40" height="44">
+            <use href="/team-project/assets/icons-029903d8.svg#green-apple"></use>
+        </svg>
+            <img id="basket" class="fruit__basket" width="30" height="30" src="/team-project/assets/fruit-basket-923c06b9.webp" alt="Меч" />
+    </div>
+    <p class="fruit__info">Почніть гру та натискайте ліву та праву стрілки для руху корзини</p>
+    <div class="fruit__line"></div>
+</section>
     <footer class="footer" id="footer__id">
     <div class="container">
         <div class="footer__wraps">
         <div class="footer__box">
-            <div class="footer__img"></div>
+            <div class="footer__img"></div> 
             <!-- <img src="./image/coding.png" alt="" class="footer__img"> -->
             <ul>
                 <li><a href="" class="footer__link">Тел: +38 (123) 456 78 90</a></li>
@@ -455,7 +482,6 @@
 </section>
 
 
-  
 
 
 
