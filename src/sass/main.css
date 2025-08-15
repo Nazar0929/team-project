@@ -1756,6 +1756,100 @@ body.dark .football__info {
   background-color: #2b2a2a;
 }
 
+.fruit {
+  padding-bottom: 36px;
+}
+.fruit__title {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 36px;
+  text-align: center;
+}
+.fruit__block {
+  height: 345px;
+  background-repeat: no-repeat;
+  background-image: url(../image/fruit-garden.webp);
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 612px;
+}
+@media screen and (min-width: 730px) {
+  .fruit__block {
+    width: 612px;
+  }
+}
+.fruit__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fruit__play {
+  border-radius: 20px;
+  background-color: #000;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 400;
+}
+.fruit__apple {
+  position: absolute;
+  left: 0;
+}
+.fruit__basket {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+.fruit__line {
+  width: 100%;
+  max-width: 536px;
+  height: 1px;
+  background-color: #000;
+  margin: 36px auto 0;
+}
+.fruit__score {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 36px;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+.fruit__info {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 24px;
+  text-align: center;
+}
+
+body.dark-mode .fruit__title {
+  color: #fff;
+}
+body.dark-mode .fruit__line {
+  background-color: #fff;
+}
+body.dark-mode .fruit__info {
+  color: #fff;
+}
+
 .footer {
   padding-bottom: 59px;
   padding-top: 61px;
