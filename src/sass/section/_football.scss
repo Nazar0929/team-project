@@ -1,56 +1,318 @@
-.socker .container {
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
+// .socker .container {
+//     padding-top: 36px;
+//     padding-bottom: 36px;
+//   }
   
-  .socker__title {
-    color: #000;
-    font-family: "Montserrat Alternates";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-  }
+//   .socker__title {
+//     color: #000;
+//     font-family: "Montserrat Alternates";
+//     font-size: 16px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: normal;
+//     text-align: center;
+//   }
   
-  .socker__field {
-    display: flex;
-    position: relative;
-    width: 450px;
-    height: 200px;
-    flex-shrink: 0;
-    border-radius: 37px;
-    border: 2px solid #000;
-    background: #5abb58;
-    margin-top: 36px;
-    justify-self: center;
-  }
+//   .socker__field {
+//     display: flex;
+//     position: relative;
+//     width: 450px;
+//     height: 200px;
+//     flex-shrink: 0;
+//     border-radius: 37px;
+//     border: 2px solid #000;
+//     background: #5abb58;
+//     margin-top: 36px;
+//     justify-self: center;
+//   }
   
-  @media screen and (min-width: 768px) {
-    .socker__field {
-      width: 720px;
-      height: 220px;
-    }
-  }
+//   @media screen and (min-width: 768px) {
+//     .socker__field {
+//       width: 720px;
+//       height: 220px;
+//     }
+//   }
   
-  .socker__ball {
-    width: 50px;
-    height: 50px;
-    z-index: 1;
-    flex-shrink: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: top 0.5s ease, left 0.5s ease;
-  }
+//   .socker__ball {
+//     width: 50px;
+//     height: 50px;
+//     z-index: 1;
+//     flex-shrink: 0;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     transition: top 0.5s ease, left 0.5s ease;
+//   }
   
 
-  .socker__vorots {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    width: 70px;
-    height: 200px;
-  }
+//   .socker__vorots {
+//     position: absolute;
+//     top: 50%;
+//     right: 10px;
+//     transform: translateY(-50%);
+//     width: 70px;
+//     height: 200px;
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.football {
+
+
+    &__title {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 36px;
+        text-align: center;
+    }
+
+    &__field {
+        margin: 0 auto 36px;
+        max-width: 720px;
+        width: 100%;
+        height: 150px;
+        border-radius: 37px;
+        border: 2px solid rgb(0, 0, 0);
+        background-color: #5ABB58;
+        position: relative;
+        cursor: url(../svg/cursor.svg) 4 4, pointer;
+        overflow: hidden;
+
+        @media screen and (min-width: 600px) {
+            height: 220px;
+        }
+    }
+
+    &__count {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 36px;
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        z-index: 10;
+        user-select: none;
+    }
+
+    &__time {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 36px;
+        position: absolute;
+        left: 80px;
+        top: 20px;
+        z-index: 10;
+        user-select: none;
+    }
+
+    &__ball {
+        pointer-events: none;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        user-select: none;
+
+        @media screen and (min-width: 600px) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__img {
+        pointer-events: none;
+        position: absolute;
+        width: 50px;
+        user-select: none;
+
+        @media screen and (min-width: 600px) {
+            width: 100px;
+        }
+    }
+
+    &__line {
+        width: 100%;
+        max-width: 536px;
+        height: 1px;
+        background-color: white;
+        margin: 0 auto;
+    }
+
+    &__backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__play {
+        border-radius: 20px;
+        background-color: black;
+        box-shadow: black;
+        padding: 10px 20px;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        font-weight: 400;
+        user-select: none;
+    }
+
+    &__info {
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    &__buts {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__btn {
+        border-radius: 20px;
+        background-color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        font-weight: 400;
+
+    }
+
+    &__modal {
+        width: calc(100% - 30px);
+        max-width: 640px;
+        background-color: white;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px 30px;
+        max-height: 400px;
+        height: calc(100% - 60px);
+
+        @media screen and (min-width: 440px) {
+            padding: 46px 66px;
+        }
+    }
+
+    &__close {
+        line-height: 0;
+        position: absolute;
+        right: 14px;
+        top: 14px;
+
+        @media screen and (min-width: 440px) {
+            right: 30px;
+            top: 30px;
+        }
+    }
+
+    &__dagger {
+        stroke: red;
+    }
+
+    &__subtitle {
+        color: red;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__table {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+        overflow-y: auto;
+        height: max-content;
+        max-height: calc(100% - 39px);
+        border-radius: 20px;
+        scrollbar-width: thin;
+        scrollbar-color: red;
+    }
+
+    &__text {
+        color: red;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 24px;
+
+        &:nth-child(odd) {
+            background-color: red;
+        }
+    }
+
+    &__header {
+        color: red;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    &__score {
+        color: red;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+body.dark .football {
+    &__title {
+        color: red;
+    }
+
+    &__field {
+        border: 2px solid red;
+    }
+
+    &__line {
+        background-color: red;
+    }
+
+    &__info {
+        // color: red;
+        color: rgb(255, 255, 255);
+        
+    }
+}

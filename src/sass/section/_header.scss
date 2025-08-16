@@ -399,6 +399,7 @@ body.dark-mode .header__arrow {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 .dark-mode .register {
   background-color: #616161;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -407,6 +408,48 @@ body.dark-mode .header__arrow {
   color: white;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+  .dark-mode a {
+    color: white;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .container {
+    background-color: #444444;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .header {
+    background-color: #444444;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .footer {
+    background-color: #444444;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .hero__line-year {
+    background-color: white;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark-mode .calculate__flex {
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  
+  .dark-mode .numbers__border {
+    border-top: solid white 1px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
 
 .dark-mode .header__dropdown {
   border-color: white;
