@@ -1,18 +1,18 @@
-(() => {
-    const refs = {
-      openModalBtn: document.querySelector("[data-mobile-open]"),
-      closeModalBtn: document.querySelector("[data-mobile-close]"),
-      modal: document.querySelector("[data-mobile]"),
-    };
-  
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
-  
-    function toggleModal() {
-      refs.modal.classList.toggle("is-hidden");
-      document.body.classList.toggle("no-scroll");
-    }
-  })();
+// (() => {
+//   const refs = {
+//     openBtn: document.querySelector("[data-mobile-open]"),
+//     backdrop: document.querySelector("[data-mobile]"),
+//   };
 
+//   refs.openBtn.addEventListener("click", () => {
+//     refs.backdrop.classList.toggle("is-hidden");
+//     document.body.classList.toggle("no-scroll");
+//   });
 
-  
+//   refs.backdrop.addEventListener("click", (e) => {
+//     if (e.target === refs.backdrop) {
+//       refs.backdrop.classList.add("is-hidden");
+//       document.body.classList.remove("no-scroll");
+//     }
+//   });
+// })();
