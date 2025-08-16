@@ -1,91 +1,174 @@
-.mobile {
-    background-color: #797777;
 
-    &__backdrop {
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px);
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-          visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// .mobile {
+//   position: relative;
+// }
+
+// .mobile__button {
+//   font-family: Montserrat Alternates;
+//   font-size: 17px;
+//   color: rgb(221, 221, 221);
+//   background: none;
+//   border: none;
+//   cursor: pointer;
+// }
+
+// .mobile__backdrop {
+//   background-color: rgba(0, 0, 0, 0.5);
+//   backdrop-filter: blur(5px);
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-start;
+//   padding-top: 50px;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.25s ease, visibility 0.25s ease;
+//   z-index: 1000;
+// }
+
+// .mobile__backdrop.is-hidden {
+//   opacity: 0;
+//   pointer-events: none;
+//   visibility: hidden;
+// }
+
+// .mobile__backdrop:not(.is-hidden) {
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+// .mobile__window {
+//   background-color: #797777;
+//   border-radius: 8px;
+//   padding: 10px 0;
+//   width: 200px;
+//   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+// }
+
+// .menu__list {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .menu__item {
+//   padding: 10px 20px;
+//   cursor: pointer;
+//   font-family: Montserrat Alternates;
+//   font-size: 17px;
+//   color: rgb(221, 221, 221);
+// }
+
+// .menu__item:hover {
+//   background-color: rgba(255,255,255,0.1);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .mobile {
+//     background-color: #797777;
+
+//     &__backdrop {
+//         background-color: rgba(0, 0, 0, 0.5);
+//         backdrop-filter: blur(5px);
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         width: 100vw;
+//         height: 100vh;
+//         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//           visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
           
 
-      }
+//       }
 
-      &__window {
-        display: flex;
-        flex-direction: column;
-        // background: #858383;
-        flex-shrink: 0;
-        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
-          0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-        position: absolute;
-        top: 12.5%;
-        left: 50%;
-        transform: scale(1) translate(-50%, -50%);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        height: 120px;
-        padding-top: 15px;
-        width: 100%;
-      }
+//       &__window {
+//         display: flex;
+//         flex-direction: column;
+//         // background: #858383;
+//         flex-shrink: 0;
+//         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+//           0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+//         position: absolute;
+//         top: 12.5%;
+//         left: 50%;
+//         transform: scale(1) translate(-50%, -50%);
+//         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//         height: 120px;
+//         padding-top: 15px;
+//         width: 100%;
+//       }
 
-      // &__backdrop.is-hidden &__window {
-      //   transform: translate(0);
-      //   transform: scale(0);
-      // }
+//       // &__backdrop.is-hidden &__window {
+//       //   transform: translate(0);
+//       //   transform: scale(0);
+//       // }
 
-    @media screen and (min-width: 768px) {
-      display: block;
-    }
-    @media screen and (min-width: 1090px) {
-      display: none;
-    }
+//     @media screen and (min-width: 768px) {
+//       display: block;
+//     }
+//     @media screen and (min-width: 1090px) {
+//       display: none;
+//     }
 
   
-}
+// }
 
-.menu {
+// .menu {
 
-    &__box {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
+//     &__box {
+//         display: flex;
+//         gap: 20px;
+//         justify-content: center;
         
-    }
+//     }
 
-    &__list2{
-        display: flex;
-        gap: 20px;
+//     &__list2{
+//         display: flex;
+//         gap: 20px;
 
-    }
+//     }
 
-    &__filter {
-        font-family: Montserrat Alternates;
-        font-size: 17px;
-        line-height: 25px;
-        color: rgb(221, 221, 221);
-    }
+//     &__filter {
+//         font-family: Montserrat Alternates;
+//         font-size: 17px;
+//         line-height: 25px;
+//         color: rgb(221, 221, 221);
+//     }
 
-    &__text {
-        font-family: Montserrat Alternates;
-        font-size: 17px; 
-        line-height: 25px;
-        color: rgb(221, 221, 221);
-    }
+//     &__text {
+//         font-family: Montserrat Alternates;
+//         font-size: 17px; 
+//         line-height: 25px;
+//         color: rgb(221, 221, 221);
+//     }
 
-}
+// }
 
-.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-  }
+// .is-hidden {
+//     opacity: 0;
+//     pointer-events: none;
+//     visibility: hidden;
+//   }
 
-  .no-scroll {
-    overflow: hidden;
-  }
+//   .no-scroll {
+//     overflow: hidden;
+//   }
 
   
