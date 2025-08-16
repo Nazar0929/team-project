@@ -2,7 +2,23 @@
   .container {
     padding: 36px 0;
     position: relative;
+
+  }
+
+
+  &__border {
+    background-color: black;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 368px;
+    @media screen and (min-width: 768px) {
+      width: 536px;
+    }
+
     text-align: center;
+
   }
 
   &__title {
@@ -44,10 +60,18 @@
   }
 
   &__game {
+
+   
+    animation: moveMain 2s linear infinite;
+    z-index: 1;
+
+    
+
     position: relative;
     margin: 0 auto;
     width: 720px;
     height: 241px;
+
     background-image: url(../image/ground.png);
     background-repeat: repeat-x;
     background-position: bottom;
