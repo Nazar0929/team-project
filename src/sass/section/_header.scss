@@ -26,9 +26,15 @@
   margin-right: 61px;
   width: 95px;
   height: 39px;
-  background-image: url(../image/header-coding.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+  // background-image: url(../image/header-coding.png);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+
+
+}
+
+body.dark-mode  img {
+  filter: invert(1);
 }
 
 

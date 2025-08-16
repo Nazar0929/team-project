@@ -127,9 +127,10 @@ input::-webkit-inner-spin-button {
   margin-right: 61px;
   width: 95px;
   height: 39px;
-  background-image: url(../image/header-coding.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+}
+
+body.dark-mode img {
+  filter: invert(1);
 }
 
 .header__list {
@@ -395,6 +396,7 @@ body.dark-mode .header__arrow {
 }
 
 .dark-mode .calculate__flex {
+  border-top: solid white 1px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -482,6 +484,46 @@ body.dark-mode .header__arrow {
 .dark-mode span {
   color: white;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode a {
+  color: white;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .container {
+  background-color: #444444;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .header {
+  background-color: #444444;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .footer {
+  background-color: #444444;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .hero__line-year {
+  background-color: white;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .calculate__flex {
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .numbers__border {
+  border-top: solid white 1px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dark-mode .header__dropdown {
@@ -996,7 +1038,7 @@ body.dark-mode .header__arrow {
   display: inline-block;
 }
 .time .time__input {
-  padding: 10px 40px 10px 10px; 
+  padding: 10px 40px 10px 10px; /* справа место под кнопку */
   border-radius: 20px;
   border: none;
   background: #D7D7D7;
@@ -1137,20 +1179,9 @@ body.dark-mode .dino__cactus {
   100% {
     right: 720px;
   }
-} header-arrow
-.socker .container {
-  padding-top: 36px;
-  padding-bottom: 36px;
 }
-
-.socker__title {
-  color: #000;
-  font-family: "Montserrat Alternates";
-
-
 .football__title {
   color: rgb(0, 0, 0);
-
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 36px;
