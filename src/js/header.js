@@ -1,6 +1,11 @@
+// import logo from "../image/white-logo1.webp"
+// console.log(logo);
 
+
+const logoImg = document.querySelector(".header__logo");
 const themeChanger = document.querySelector(".header__theme-changer");
 const body = document.body;
+
 
 themeChanger.addEventListener("change", () => {
   const isDark = themeChanger.checked;
