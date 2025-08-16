@@ -26,7 +26,6 @@ margin-bottom: 36px;
         border-radius: 20px;
         background: #D9D9D9;
         margin: 0 auto;
-        transform: translateY(-120px);
         overflow: hidden;
         position: relative;
     }
@@ -47,6 +46,9 @@ margin-bottom: 36px;
 
     }
 
+    &__button {
+        background-color: transparent;
+    }
 
 
 
@@ -58,6 +60,7 @@ font-size: 14px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
+margin-top: 20px;
     }
 
     &__desc {

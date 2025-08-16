@@ -69,19 +69,16 @@
         user-select: none;
     }
 
-    &__ball {
-        pointer-events: none;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        width: 25px;
-        height: 25px;
-        user-select: none;
+.football__ball {
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  user-select: none;
+  transition: left 0.5s ease, top 0.5s ease;
+}
 
-        @media screen and (min-width: 600px) {
-            width: 50px;
-            height: 50px;
-        }
-    }
 
     &__img {
         pointer-events: none;
