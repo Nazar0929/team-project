@@ -1063,7 +1063,20 @@ body.dark-mode .header__arrow {
 .dino .container {
   padding: 36px 0;
   position: relative;
+}
+.dino__border {
+  background-color: black;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 368px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .dino__border {
+    width: 536px;
+  }
 }
 .dino__title {
   font-family: "Montserrat Alternates";
@@ -1097,6 +1110,8 @@ body.dark-mode .header__arrow {
   background-color: #125598;
 }
 .dino__game {
+  animation: moveMain 2s linear infinite;
+  z-index: 1;
   position: relative;
   margin: 0 auto;
   width: 720px;
