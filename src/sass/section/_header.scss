@@ -325,9 +325,6 @@ body.dark-mode .header__arrow {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dark-mode .dino__border {
-  color: white;
-}
 
 .dark-mode .numbers__border {
   border-top: solid white 1px;
@@ -343,16 +340,21 @@ body.dark-mode .header__arrow {
   background-image: url(../image/white-dino.webp);
   width: 50px;
   height: 50px;
-  top: 190px;
   
 }
 
 .dark-mode .dino__cactus {
   background-image: url(../image/white-cactus.webp);
-  transform: scale(3.5);
-  top: 228px;
-  // bottom: 0;
-  background-color: none;
+  top: 200px;
+
+      background-repeat: no-repeat;
+    background-size: 35px 40px;
+    transform: scale(6);
+        width: 50px;
+    height: 40px;
+  
+
+  // background-color: none;
 }
 
 
@@ -388,10 +390,7 @@ body.dark-mode .header__arrow {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dark-mode .science__name {
-  color: #000;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .dark-mode .header__logo {
   background-image: url(../image/white-logo.webp);
@@ -512,6 +511,16 @@ body.dark-mode .header__arrow {
   background-color: #444444;
 }
 
+/* светлая тема */
+.photo__arrow path {
+  stroke: black;
+  stroke-width: 2;
+}
+
+/* тёмная тема */
+.dark-mode .photo__arrow path {
+  stroke: white;
+}
 
 // .dark-mode .football__field {
 //   border-color: white;

@@ -81,12 +81,13 @@ table.addEventListener('click', toggleModal);
 tableCloseBtn.addEventListener('click', toggleModal);
 
 function toggleModal(e) {
-  if (e.currentTarget === table && e.currentTarget !== e.target) {
-    return;
+  // Закриваємо при кліку на фон або на кнопку
+  if (e.target === table || e.currentTarget === tableCloseBtn || e.currentTarget === tableBtn) {
+    table.classList.toggle('is-hidden');
+    page.classList.toggle('no-scroll');
   }
-  page.classList.toggle('no-scroll');
-  table.classList.toggle('is-hidden');
 }
+
 
 const ballWidth = ball.scrollWidth;
 const ballHeight = ball.scrollHeight;
@@ -116,6 +117,8 @@ function addRowToTable() {
         </div>`
   );
 }
+
+
 
 function setTime() {
   const interval = setInterval(() => {
