@@ -2,7 +2,7 @@
 // console.log(logo);
 
 
-const logoImg = document.querySelector(".header__logo");
+// const logoImg = document.querySelector(".header__logo");
 const themeChanger = document.querySelector(".header__theme-changer");
 const body = document.body;
 
