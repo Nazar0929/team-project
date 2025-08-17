@@ -1,57 +1,45 @@
-
-<section id="7" class="football">
-            <div class="subline">
-    <div class="linee"></div>
-  </div>
+<section class="football">
   <h2 class="football__title">Футбол</h2>
+
+  <div class="football__name-box">
+    <input type="text" id="user-name-input" class="football__input" placeholder="Введіть ім'я" maxlength="20" />
+  </div>
+
   <div id="football-field" class="football__field">
+    <!-- Стартовий backdrop -->
     <div data-football="backdrop" class="football__backdrop">
-      <button data-football="play" class="football__play">PLay now</button>
+      <button data-football="play" class="football__play">Play now</button>
     </div>
+
+    <!-- Кінець гри -->
     <div data-football="end" class="football__backdrop is-hidden">
-      <p class="football__play">
-        Ти забив <span id="football-output"></span> голів
-      </p>
+      <p class="football__play">Ти забив <span id="football-output"></span> голів</p>
       <button data-football="restart" class="football__play">Restart</button>
     </div>
+
     <p id="football-count" class="football__count">0</p>
     <p id="football-time" class="football__time">0:30</p>
-      <img
-        id="football-ball"
-        class="football__ball"
-        width="50"
-        height="50"
-        src="./imgs/footbalimg.png"
-        alt="М'ячик"
-      />
-      <img
-        id="football-gates"
-        class="football__img"
-        width="50"
-        height="50"
-        src="./imgs/football-gates@1x.webp"
-        alt="Ворота"
-      />
+
+    <img id="football-ball" class="football__ball" width="50" height="50" src="./imgs/footbalimg.png" alt="М'ячик" />
+    <img id="football-gates" class="football__img" width="70" height="70" src="./imgs/football-gates@1x.webp" alt="Ворота" />
   </div>
-  <div class="football__buts">
-  <button type="button" id="table-btn" class="football__btn">Переглянути результати</button>
-  </div>
+
+  <!-- Модалка таблиці -->
   <div data-football="table" class="backdrop is-hidden">
     <div class="football__modal">
       <button id="table-close-btn" class="football__close">
         <svg class="football__dagger" width="15" height="15">
-          <use href="./svg/icons.svg#close-modal"></use>
+          <line x1="0" y1="0" x2="15" y2="15" stroke="red" stroke-width="2" />
+          <line x1="15" y1="0" x2="0" y2="15" stroke="red" stroke-width="2" />
         </svg>
       </button>
       <h2 class="football__subtitle">Таблиця результатів</h2>
+      <button id="clear-table-btn" class="football__btn football__clear-btn">Очистити таблицю</button>
       <div id="football-table-list" class="football__table">
         <p class="football__text">Ще не має результатів</p>
-        <!-- <div class="football__row">
-          <h3 class="football__header">Анна</h3>
-          <p class="football__score">25</p>
-        </div> -->
       </div>
     </div>
   </div>
-  <p class="football__info">Почніть гру та забийте як найбільше голів</p>
+
+  <p class="football__info">Почніть гру та забийте якнайбільше голів</p>
 </section>

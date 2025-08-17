@@ -1,16 +1,41 @@
 const listEl = document.querySelector('.photo__list');
 const itemEl = document.querySelectorAll('.photo__item');
 const buttonRef = document.querySelectorAll('.photo__button');
-console.log(buttonRef);
+const subtitleEl = document.querySelector('.photo__subtitle');
+const descEl = document.querySelector('.photo__desc');
+
+const students = [
+  { 
+    name: "Nazar", 
+    desc: " Виконав секції: Камінь-ножиці-папір, Калькулятор часу, Футбол, Наша команда та Footer." 
+  },
+  { 
+    name: "Taras", 
+    desc: " Виконав секції: Header, Перевір, в який рік ти народився, Динозавр, Введіть три числа та Падаючі фрукти." 
+  },
+  { 
+    name: "Ivan", 
+    desc: " Виконав секцію: Вгадай число, яке загадав комп’ютер." 
+  },
+  { 
+    name: "Oleksandr", 
+    desc: " Виконав секцію: Вчені та Калькулятор." 
+  }
+];
 
 let currentIndex = 0;
+
 function updateSlider() {
   listEl.style.transform = `translateX(${-currentIndex * 100}%)`;
+  subtitleEl.textContent = students[currentIndex].name;
+  descEl.textContent = students[currentIndex].desc;
 }
-// ArrowRight  ArrowLeft
 
+// Ініціалізуємо перший студент
+updateSlider();
+
+// Клавіші ArrowRight / ArrowLeft
 window.addEventListener('keydown', event => {
-  console.log(event.code);
   if (event.code === 'ArrowRight') {
     if (currentIndex < itemEl.length - 1) {
       currentIndex++;
@@ -24,21 +49,16 @@ window.addEventListener('keydown', event => {
   }
 });
 
+// Кнопки
 buttonRef.forEach(button => {
-  // console.log(button.dataset.action);
-
-  button.addEventListener('click', event => {
+  button.addEventListener('click', () => {
     const action = button.dataset.action;
-    if (action === 'left') {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-      }
-    } else if (action === 'right') {
-      if (currentIndex < itemEl.length - 1) {
-        currentIndex++;
-        updateSlider();
-      }
+    if (action === 'left' && currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    } else if (action === 'right' && currentIndex < itemEl.length - 1) {
+      currentIndex++;
+      updateSlider();
     }
   });
 });

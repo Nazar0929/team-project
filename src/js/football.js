@@ -1,214 +1,180 @@
-// const ballEl = document.querySelector(".socker__ball");
-// const fieldEl = document.querySelector(".socker__field");
-// const spanEl = document.querySelector(".socker__span");
-
-
-
-// fieldEl.addEventListener("click", (e) => {
-//     const fieldRect = fieldEl.getBoundingClientRect();
-
-//     let x = e.clientX - fieldRect.left - ballEl.clientWidth / 2;
-//     let y = e.clientY - fieldRect.top - ballEl.clientHeight / 2;
-
-//     x = Math.max(0, Math.min(x, fieldEl.clientWidth - ballEl.clientWidth));
-//     y = Math.max(0, Math.min(y, fieldEl.clientHeight - ballEl.clientHeight));
-
-//     ballEl.style.left = `${x}px`;
-//     ballEl.style.top = `${y}px`;
-// });
-
-
-// ballEl.addEventListener("mousemove", onMouseMove) 
-
-// function onMouseMove(event) {
-
-//     console.log(event.clientX);
-//     console.log(event.clientY);
-    
-
-//     const x = 1080;
-//     const y = 180;
-
-//     let goal = 0;
-
-//     if (event.clientX > 1000 && event.clientX < 1080 && event.clientY > 100 && event.clientY < 230) {
-//         console.log("Great");
-//         goal += 1;
-//         spanEl.textContent = goal;
-//     } 
-    
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// DOM
 const ball = document.querySelector('#football-ball');
 const gates = document.querySelector('#football-gates');
 const field = document.querySelector('#football-field');
 const countOutput = document.querySelector('#football-count');
-const button = document.querySelector(`[data-football="play"]`);
-const backdrop = document.querySelector(`[data-football="backdrop"]`);
-const gameOver = document.querySelector(`[data-football="end"]`);
 const timeOutput = document.querySelector('#football-time');
 const spanOutput = document.querySelector('#football-output');
-const restartBtn = document.querySelector(`[data-football="restart"]`);
-const tableBtn = document.querySelector('#table-btn');
-const table = document.querySelector(`[data-football="table"]`);
+const playBtn = document.querySelector('[data-football="play"]');
+const restartBtn = document.querySelector('[data-football="restart"]');
+const gameOver = document.querySelector('[data-football="end"]');
+const backdrop = document.querySelector('[data-football="backdrop"]');
+const table = document.querySelector('[data-football="table"]');
 const tableCloseBtn = document.querySelector('#table-close-btn');
-const page = document.querySelector('body');
 const tableList = document.querySelector('#football-table-list');
-const nameOutput = document.querySelector('#user-name-output');
+const clearTableBtn = document.querySelector('#clear-table-btn');
+const nameInput = document.querySelector('#user-name-input');
+const page = document.body;
+
 let countOfGoals = 0;
 let timeScore = 30;
-timeOutput.textContent = `0:${timeScore}`;
 let isPlaying = false;
 let isGoal = false;
+let intervalId;
 
-tableBtn.addEventListener('click', toggleModal);
-table.addEventListener('click', toggleModal);
-tableCloseBtn.addEventListener('click', toggleModal);
-
-function toggleModal(e) {
-  // Закриваємо при кліку на фон або на кнопку
-  if (e.target === table || e.currentTarget === tableCloseBtn || e.currentTarget === tableBtn) {
-    table.classList.toggle('is-hidden');
-    page.classList.toggle('no-scroll');
-  }
-}
-
-
-const ballWidth = ball.scrollWidth;
-const ballHeight = ball.scrollHeight;
-let ballX = 60 + ballWidth / 2;
-let ballY = (field.scrollHeight - ballHeight) / 2 + ballHeight / 2;
-
-ball.style.left = `${ballX}px`;
-ball.style.top = `${ballY}px`;
-
-const gatesWidth = gates.scrollWidth;
-const gatesHeight = gates.scrollHeight;
-const gatesX = field.scrollWidth - gatesWidth - 30;
-const gatesY = (field.scrollHeight - gatesHeight) / 2;
-
-gates.style.right = `${30}px`;
+// Ворота
+const gatesWidth = gates.offsetWidth;
+const gatesHeight = gates.offsetHeight;
+const gatesX = field.offsetWidth - gatesWidth - 30;
+const gatesY = (field.offsetHeight - gatesHeight)/2;
+gates.style.right = '30px';
 gates.style.top = `${gatesY}px`;
 
-function addRowToTable() {
-  if (tableList.firstElementChild.classList.contains('football__text')) {
-    tableList.innerHTML = '';
-  }
-  tableList.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="football__row">
-          <h3 class="football__header">${nameOutput.textContent}</h3>
-          <p class="football__score">${countOfGoals}</p>
-        </div>`
-  );
-}
+// М'яч
+const ballWidth = ball.offsetWidth;
+const ballHeight = ball.offsetHeight;
+let ballX = 60 + ballWidth/2;
+let ballY = (field.offsetHeight - ballHeight)/2 + ballHeight/2;
+ball.style.left = `${ballX}px`;
+ball.style.top = `${ballY}px`;
+timeOutput.textContent = `0:${timeScore}`;
 
-
-
-function setTime() {
-  const interval = setInterval(() => {
-    if (timeScore > 0) {
-      timeScore -= 1;
-      timeOutput.textContent = `0:${String(timeScore).padStart(2, '0')}`;
-    } else {
-      addRowToTable();
-      isPlaying = false;
-      spanOutput.textContent = `${countOfGoals}`;
-      gameOver.classList.toggle('is-hidden');
-      clearInterval(interval);
-    }
-  }, 1000);
-}
-
-restartBtn.addEventListener('click', () => {
-  isPlaying = true;
+// --- Запуск гри ---
+function startGame() {
   countOfGoals = 0;
-  countOutput.textContent = '0';
   timeScore = 30;
+  countOutput.textContent = '0';
   timeOutput.textContent = `0:${timeScore}`;
-  gameOver.classList.toggle('is-hidden');
-  setTime();
-});
-
-button.addEventListener('click', () => {
   isPlaying = true;
-  backdrop.classList.add('is-hidden');
-  setTime();
-});
+  isGoal = false;
 
-field.addEventListener('click', e => {
-  if (!isPlaying || isGoal) {
-    return;
-  }
-  let ballX = e.offsetX;
-  let ballY = e.offsetY;
-
-  if (ballX < ballWidth / 2) {
-    ballX = ballWidth / 2;
-  } else if (ballX > field.scrollWidth - ballWidth / 2) {
-    ballX = field.scrollWidth - ballWidth / 2;
-  }
-  if (ballY < ballWidth / 2) {
-    ballY = ballWidth / 2;
-  } else if (ballY > field.scrollHeight - ballHeight / 2) {
-    ballY = field.scrollHeight - ballHeight / 2;
-  }
-
-  if (ballX + ballWidth / 2 > gatesX + gatesWidth) {
-    ballX = gatesX + gatesWidth - ballWidth / 2;
-    ball.style.left = `${ballX}px`;
-  }
-
-  if (
-    ballX - ballWidth / 2 >= gatesX &&
-    ballX + ballWidth / 2 <= gatesX + gatesWidth &&
-    ballY - ballHeight / 2 < gatesY
-  ) {
-    ballY = gatesY + ballHeight / 2;
-    ball.style.top = `${ballY}px`;
-  } else if (
-    ballX - ballWidth / 2 >= gatesX &&
-    ballX + ballWidth / 2 <= gatesX + gatesWidth &&
-    ballY + ballHeight / 2 > gatesY + gatesHeight
-  ) {
-    ballY = gatesY + gatesHeight - ballHeight / 2;
-    ball.style.top = `${ballY}px`;
-  }
+  // Повернути м’яч у стартову позицію
+  ballX = 60 + ballWidth/2;
+  ballY = (field.offsetHeight - ballHeight)/2 + ballHeight/2;
   ball.style.left = `${ballX}px`;
   ball.style.top = `${ballY}px`;
 
-  if (
-    ballX - ballWidth / 2 >= gatesX &&
-    ballX + ballWidth / 2 <= gatesX + gatesWidth &&
-    ballY - ballHeight / 2 >= gatesY &&
-    ballY + ballHeight / 2 <= gatesY + gatesHeight
-  ) {
+  // Ховаємо backdrop і кінець гри
+  backdrop.classList.add('is-hidden');
+  gameOver.classList.add('is-hidden');
+
+  // Прокрутка сторінки завжди активна
+  page.classList.remove('no-scroll');
+
+  setTime();
+}
+
+// --- Таймер ---
+function setTime() {
+  clearInterval(intervalId);
+  intervalId = setInterval(() => {
+    if (timeScore > 0) timeScore--;
+    else { endGame(); }
+    timeOutput.textContent = `0:${String(timeScore).padStart(2,'0')}`;
+  },1000);
+}
+
+// --- Кінець гри ---
+function endGame() {
+  isPlaying = false;
+  clearInterval(intervalId);
+  spanOutput.textContent = countOfGoals;
+
+  // Показуємо блок з Restart
+  gameOver.classList.remove('is-hidden');
+
+  // Прокрутка сторінки активна
+  page.classList.remove('no-scroll');
+
+  saveResultToStorage(nameInput.value || 'Гравець', countOfGoals);
+}
+
+// --- Клік по полю ---
+field.addEventListener('click', e=>{
+  if (!isPlaying || isGoal) return;
+
+  let newX = e.offsetX;
+  let newY = e.offsetY;
+
+  newX = Math.max(ballWidth/2, Math.min(newX, field.offsetWidth-ballWidth/2));
+  newY = Math.max(ballHeight/2, Math.min(newY, field.offsetHeight-ballHeight/2));
+
+  if (newX-ballWidth/2 >= gatesX && newX+ballWidth/2 <= gatesX+gatesWidth) {
+    if (newY-ballHeight/2 < gatesY) newY = gatesY+ballHeight/2;
+    if (newY+ballHeight/2 > gatesY+gatesHeight) newY = gatesY+gatesHeight-ballHeight/2;
+  }
+
+  ball.style.left = `${newX}px`;
+  ball.style.top = `${newY}px`;
+
+  const isInsideGate = newX-ballWidth/2 >= gatesX &&
+    newX+ballWidth/2 <= gatesX+gatesWidth &&
+    newY-ballHeight/2 >= gatesY &&
+    newY+ballHeight/2 <= gatesY+gatesHeight;
+
+  if (isInsideGate) {
     isGoal = true;
-    countOfGoals += 1;
+    countOfGoals++;
     countOutput.textContent = countOfGoals;
-    ballX = 60 + ballWidth / 2;
-    ballY = (field.scrollHeight - ballHeight) / 2 + ballHeight / 2;
-    setTimeout(() => {
+
+    setTimeout(()=>{
+      ballX = 60 + ballWidth/2;
+      ballY = (field.offsetHeight - ballHeight)/2 + ballHeight/2;
       ball.style.left = `${ballX}px`;
       ball.style.top = `${ballY}px`;
-    }, 1000);
-    setTimeout(() => {
       isGoal = false;
-    }, 1000);
+    },1000);
   }
 });
+
+// --- Кнопки ---
+playBtn.addEventListener('click', startGame);
+restartBtn.addEventListener('click', startGame);
+
+// --- Модалка таблиці ---
+function openTableModal(){
+  table.classList.remove('is-hidden');
+  page.classList.add('no-scroll'); // тільки для таблиці
+}
+function closeTableModal(){
+  table.classList.add('is-hidden');
+  page.classList.remove('no-scroll');
+}
+tableCloseBtn.addEventListener('click', closeTableModal);
+table.addEventListener('click', e=>{
+  if (!e.target.closest('.football__modal')) closeTableModal();
+});
+
+// --- LocalStorage ---
+function saveResultToStorage(name, score){
+  const data = JSON.parse(localStorage.getItem('football-results'))||[];
+  data.push({name, score});
+  localStorage.setItem('football-results', JSON.stringify(data));
+  loadResultsFromStorage();
+}
+
+function loadResultsFromStorage(){
+  const stored = JSON.parse(localStorage.getItem('football-results'))||[];
+  if (stored.length===0){
+    tableList.innerHTML = '<p class="football__text">Ще не має результатів</p>';
+    return;
+  }
+  stored.sort((a,b)=>b.score-a.score);
+  tableList.innerHTML = '';
+  stored.forEach(({name, score})=>{
+    tableList.insertAdjacentHTML('beforeend',`
+      <div class="football__row">
+        <h3 class="football__header">${name}</h3>
+        <p class="football__score">${score}</p>
+      </div>`);
+  });
+}
+
+// --- Очистка таблиці ---
+clearTableBtn.addEventListener('click', ()=>{
+  localStorage.removeItem('football-results');
+  loadResultsFromStorage();
+});
+
+// --- Перший запуск ---
+loadResultsFromStorage();

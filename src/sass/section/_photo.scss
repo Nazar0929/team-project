@@ -65,11 +65,16 @@ margin-top: 20px;
 
     &__desc {
         color: #000;
-font-family: "Montserrat Alternates";
+        font-family: "Montserrat Alternates", sans-serif;
 font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+line-height: 1.4;
+    margin: 0 auto;
+    max-width: 300px;
+    text-align: center;
     }
 
 }
+
