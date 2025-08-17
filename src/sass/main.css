@@ -127,10 +127,9 @@ input::-webkit-inner-spin-button {
   margin-right: 61px;
   width: 95px;
   height: 39px;
-}
-
-body.dark-mode img {
-  filter: invert(1);
+  background-image: url(../image/header-coding.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .header__list {
@@ -258,9 +257,6 @@ body.dark-mode .header__dropdown-item:hover {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.header {
-  /* Темна тема для body і інверсія картинок */
-}
 .header__greetings {
   display: none;
 }
@@ -396,8 +392,11 @@ body.dark-mode .header__arrow {
 }
 
 .dark-mode .calculate__flex {
-  border-top: solid white 1px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .dino__border {
+  color: white;
 }
 
 .dark-mode .numbers__border {
@@ -1085,9 +1084,9 @@ body.dark-mode .header__arrow {
 }
 .dino__points {
   position: absolute;
-  left: 12%;
-  top: 60px;
-  font-size: 12px;
+  left: 30%;
+  top: 130px;
+  font-size: 15px;
   color: #000;
 }
 .dino__text {
