@@ -1,41 +1,48 @@
+
 <div class="all">
     <header id="header__jakor" class="header">
-        <div class="container">
-            <nav class="header__navigation">
-                <a href="#hero"><div class="header__logo"></div></a>
-                <ul class="header__list">
-                    <li class="header__item header__interactive">
-                        <p class="header__text">Інтерактив</p>
-                        <img src="./image/header-arrow.webp" alt="" class="header__arrow">
-                        <div class="header__dropdown">
-                          
-                            <button id = "nunn1" class="header__dropdown-item">Числовий</button>
-                            <button id = "nuj2" class="header__dropdown-item">Ігровий</button>
-                            <button id = "nul3" class="header__dropdown-item">Ознайомчий</button>
-                           
-                        </div>
-                    </li>
-                    <li class="header__item">
-                        <a href="#acquaintance" class="header__text">Наша команда</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#footer__id" class="header__text">Контакти</a>
-                    </li>
-                </ul>
-                <label class="header__theme">
-                    <input class="header__theme-changer" type="checkbox">
-                    <span class="header__theme-slider">
-                      <img class="header__theme-icon header__theme-icon-sun" src="./image/sun-icon.webp" alt="Light theme" value="light">
-                      <img class="header__theme-icon header__theme-icon-moon" src="./image/moon-icon.webp" alt="Black theme" value="dark">
-                    </span>
-                </label>
-                <p class="header__greetings">Вітаємо, User!</p>
-    
-                <button class="header__burger" type="button" data-mobile-open>
-                   <div class="header__menu"></div>
-                  </button>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="header__navigation">
+          <a href="#hero" class="header__logo-link">
+            <div class="header__logo" aria-hidden="true"></div>
+          </a>
+  
+          <ul class="header__list">
+            <li class="header__item header__interactive" tabindex="0">
+              <div class="header__interactive-label">
+                <p class="header__text">Інтерактив</p>
+                <img src="./image/header-arrow.webp" alt="" class="header__arrow" />
+              </div>
+  
+              <div class="header__dropdown" role="menu" aria-hidden="true">
+                <button class="header__dropdown-item" id="nunn1">Числовий</button>
+                <button class="header__dropdown-item" id="nuj2">Ігровий</button>
+                <button class="header__dropdown-item" id="nul3">Ознайомчий</button>
+              </div>
+            </li>
+  
+            <li class="header__item"><a href="#photo" class="header__text">Наша команда</a></li>
+            <li class="header__item"><a href="#footer__id" class="header__text">Контакти</a></li>
+          </ul>
+  
+          <label class="header__theme">
+            <input class="header__theme-changer" type="checkbox" aria-label="Toggle theme">
+            <span class="header__theme-slider">
+              <img class="header__theme-icon header__theme-icon-sun" src="./image/sun-icon.webp" alt="Light">
+              <img class="header__theme-icon header__theme-icon-moon" src="./image/moon-icon.webp" alt="Dark">
+            </span>
+          </label>
+  
+          <p class="header__greetings">Вітаємо, User!</p>
+  
+          <!-- <button class="header__burger" type="button" data-mobile-open> -->
+            <div class="header__menu"></div>
+          </button>
+        </nav>
+      </div>
     </header>
     </div>
-    
+
+
+
+

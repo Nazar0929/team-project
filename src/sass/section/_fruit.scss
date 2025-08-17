@@ -39,7 +39,39 @@
         justify-content: center;
         align-items: center;
     }
+    
+    &__pause {
+        background: orange;
+        position: absolute;
+        left: 480px;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px;
+        &:hover {
+            background: darkorange;
+        }
+    }
 
+    &__pauses {
+        background-color:  blue;
+        position: absolute;
+        left: 350px;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px;
+        &:hover {
+            background-color: darkblue;
+        }
+    }
+    
     &__play {
         border-radius: 20px;
         background-color: #000;
