@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <script type="module" crossorigin src="/team-project/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/team-project/assets/index-86b0f5b9.css">
+    <link rel="stylesheet" href="/team-project/assets/index-743e5d6f.css">
   </head>
   <body>
 
@@ -219,62 +219,50 @@
   </div>
 </section>
 
-    
-<section id="7" class="football">
-            <div class="subline">
-    <div class="linee"></div>
-  </div>
+    <section class="football">
   <h2 class="football__title">Футбол</h2>
+
+  <div class="football__name-box">
+    <input type="text" id="user-name-input" class="football__input" placeholder="Введіть ім'я" maxlength="20" />
+  </div>
+
   <div id="football-field" class="football__field">
+    <!-- Стартовий backdrop -->
     <div data-football="backdrop" class="football__backdrop">
-      <button data-football="play" class="football__play">PLay now</button>
+      <button data-football="play" class="football__play">Play now</button>
     </div>
+
+    <!-- Кінець гри -->
     <div data-football="end" class="football__backdrop is-hidden">
-      <p class="football__play">
-        Ти забив <span id="football-output"></span> голів
-      </p>
+      <p class="football__play">Ти забив <span id="football-output"></span> голів</p>
       <button data-football="restart" class="football__play">Restart</button>
     </div>
+
     <p id="football-count" class="football__count">0</p>
     <p id="football-time" class="football__time">0:30</p>
-      <img
-        id="football-ball"
-        class="football__ball"
-        width="50"
-        height="50"
-        src="data:image/png;base64,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"
-        alt="М'ячик"
-      />
-      <img
-        id="football-gates"
-        class="football__img"
-        width="50"
-        height="50"
-        src="/team-project/assets/football-gates@1x-c0b6f81c.webp"
-        alt="Ворота"
-      />
+
+    <img id="football-ball" class="football__ball" width="50" height="50" src="data:image/png;base64,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" alt="М'ячик" />
+    <img id="football-gates" class="football__img" width="70" height="70" src="/team-project/assets/football-gates@1x-c0b6f81c.webp" alt="Ворота" />
   </div>
-  <div class="football__buts">
-  <button type="button" id="table-btn" class="football__btn">Переглянути результати</button>
-  </div>
+
+  <!-- Модалка таблиці -->
   <div data-football="table" class="backdrop is-hidden">
     <div class="football__modal">
       <button id="table-close-btn" class="football__close">
         <svg class="football__dagger" width="15" height="15">
-          <use href="/team-project/assets/icons-029903d8.svg#close-modal"></use>
+          <line x1="0" y1="0" x2="15" y2="15" stroke="red" stroke-width="2" />
+          <line x1="15" y1="0" x2="0" y2="15" stroke="red" stroke-width="2" />
         </svg>
       </button>
       <h2 class="football__subtitle">Таблиця результатів</h2>
+      <button id="clear-table-btn" class="football__btn football__clear-btn">Очистити таблицю</button>
       <div id="football-table-list" class="football__table">
         <p class="football__text">Ще не має результатів</p>
-        <!-- <div class="football__row">
-          <h3 class="football__header">Анна</h3>
-          <p class="football__score">25</p>
-        </div> -->
       </div>
     </div>
   </div>
-  <p class="football__info">Почніть гру та забийте як найбільше голів</p>
+
+  <p class="football__info">Почніть гру та забийте якнайбільше голів</p>
 </section>
 
     <section class="numbers" id="number">
