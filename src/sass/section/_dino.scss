@@ -1,4 +1,6 @@
 .dino {
+
+  text-align: center;
   .container {
     padding: 36px 0;
     position: relative;
@@ -19,12 +21,15 @@
 
     text-align: center;
 
+
   }
+
 
   &__title {
     font-family: "Montserrat Alternates";
     font-size: 16px;
     color: #000;
+    text-align: center;
   }
 
   &__points {
@@ -52,6 +57,7 @@
     background-color: #000;
     cursor: pointer;
     transition: background-color 0.3s;
+
   }
 
   &__start:hover,

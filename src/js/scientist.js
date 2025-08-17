@@ -90,8 +90,8 @@ const listEl = document.querySelector(".scientist__list");
 
 const renderScientists = (array) => {
     listEl.innerHTML = array.map(({name, surname, born, dead}) => `<li class="scientist__item">
-        <p class="scientist__name">${name} ${surname}</p>
-        <p class="scientist__life">${born}-${dead}</p>
+        <h4 class="scientist__name">${name} ${surname}</p>
+        <h4 class="scientist__life">${born}-${dead}</p>
       </li>`).join("");
 };
 
