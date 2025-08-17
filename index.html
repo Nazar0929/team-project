@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <script type="module" crossorigin src="/team-project/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/team-project/assets/index-02619d9f.css">
+    <link rel="stylesheet" href="/team-project/assets/index-86b0f5b9.css">
   </head>
   <body>
 
@@ -88,8 +88,11 @@
     </div>
     </div>
     </section>
-             <div class="dino__border"></div>
+     
 <section class="comp"  id="comp">
+          <div class="subline">
+    <div class="linee"></div>
+  </div>
     <div class="container">
     <div class="comp__fullbox">
         <p class="comp__title">Вгадай число, яке загадав комп’ютер</p>
@@ -98,7 +101,7 @@
             <input type="text" class="comp__input-num" id="heroInput" placeholder="Введіть число"/>
 
             <button id="checkButton" class="comp__search-num" type="submit" aria-label="button confirm">
-                <img width="15px" src="../image/search.webp" alt="search">
+                <img width="15px" src="data:image/webp;base64,UklGRrIAAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSHQAAAABcFBrW548ERbhi2AEIhiBCDaQBrOBNpgNRhMivBFef4AtQkQobNsGaTuGQ4C0ydquDFzdcx1NJYib/ARI1gWAkBPwdqFn8Q7IMWCxAJuR9pHrsE/a2bU/60M0Z4CXlYPlrvHvwz3l1itXWTVF+2vKk+JIDVZQOCAYAAAAMAEAnQEqEAAQAAIANCWkAANwAP77lAAA" alt="search">
             </button>
           
             <p id="result" class="comp__check-num">Вітаю, ви вгадали число! (number) </p>
@@ -175,7 +178,9 @@
 </section>
 
     <section class="time" style="color: black;">
-        <div class="dino__border"></div>
+        <div class="subline">
+    <div class="linee"></div>
+  </div>
   <div class="container time__container" style="color: black; padding-top: 36px">
     <h2 class="time__title">Калькулятор часу</h2>
     <div class="time__div" >
@@ -183,10 +188,7 @@
   <div class="time__input-wrapper">
     <input id="time-input" class="time__input" type="search" placeholder="Введіть число">
     <button id="time-button" class="time__button" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <circle cx="6.52174" cy="6.52174" r="5.52174" stroke="white" stroke-width="2"></circle>
-        <path d="M14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L14.2929 15.7071ZM11.468 10.0538L10.7609 9.34665L9.34666 10.7609L10.0538 11.468L11.468 10.0538ZM15.7071 14.2929L11.468 10.0538L10.0538 11.468L14.2929 15.7071L15.7071 14.2929Z" ></path>
-      </svg>
+   <img width="15px" src="data:image/webp;base64,UklGRrIAAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSHQAAAABcFBrW548ERbhi2AEIhiBCDaQBrOBNpgNRhMivBFef4AtQkQobNsGaTuGQ4C0ydquDFzdcx1NJYib/ARI1gWAkBPwdqFn8Q7IMWCxAJuR9pHrsE/a2bU/60M0Z4CXlYPlrvHvwz3l1itXWTVF+2vKk+JIDVZQOCAYAAAAMAEAnQEqEAAQAAIANCWkAANwAP77lAAA" alt="search">
     </button>
   </div>
 </form>
@@ -197,7 +199,9 @@
     <p id="time-text" class="time__text" >0 дн. 0 год. 0 хв. 0 сек.</p>
     </div>
   </div>
-        <div class="dino__border"></div>
+        <div class="subline">
+    <div class="linee"></div>
+  </div>
 </section>
 
     
@@ -216,13 +220,10 @@
 </section>
 
     
-
-
-
-
-
-
 <section id="7" class="football">
+            <div class="subline">
+    <div class="linee"></div>
+  </div>
   <h2 class="football__title">Футбол</h2>
   <div id="football-field" class="football__field">
     <div data-football="backdrop" class="football__backdrop">
@@ -303,36 +304,29 @@
   <div class="container">
     <h2 class="photo__title">Наша команда</h2>
     <div class="photo__wrap">
-    <button type="button" class="photo__button" data-action="left">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="52"
-        height="102"
-        viewBox="0 0 52 102"
-        fill="none"
-      >
-        <path d="M51 1L1 51L51 101" stroke="black" />
-      </svg>
-    </button>
+  <button type="button" class="photo__button" data-action="left">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="52" height="102" viewBox="0 0 52 102"
+       fill="none" class="photo__arrow">
+    <path d="M51 1L1 51L51 101" />
+  </svg>
+</button>
+
         <div class="photo__box">
     <ul class="photo__list">
-      <li class="photo__item"><img src="../imgs/nazar.jpg" alt=""  class="photo__imgs"/></li>
-      <li class="photo__item"><img src="../imgs/taras.jpg" alt=""  class="photo__imgs"/></li>
-      <li class="photo__item"><img src="../imgs/ivsn.jpg" alt=""  class="photo__imgs"/></li>
-      <li class="photo__item"><img src="" alt=""  class="photo__imgs"/></li>
+      <li class="photo__item"><img src="/team-project/assets/nazar-faf1588a.jpg" alt=""  class="photo__imgs"/></li>
+      <li class="photo__item"><img src="/team-project/assets/taras-1b389f71.jpg" alt=""  class="photo__imgs"/></li>
+      <li class="photo__item"><img src="/team-project/assets/ivsn-641ff4f9.jpg" alt=""  class="photo__imgs"/></li>
+      <li class="photo__item"><img src="/team-project/assets/oleks-2a90bb89.jpg" alt=""  class="photo__imgs"/></li>
     </ul>
     </div>
-    <button type="button" class="photo__button" data-action="right">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="52"
-        height="102"
-        viewBox="0 0 52 102"
-        fill="none"
-      >
-        <path d="M1 1L51 51L1 101" stroke="black" />
-      </svg>
-    </button>
+  <button type="button" class="photo__button" data-action="right">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="52" height="102" viewBox="0 0 52 102"
+       fill="none" class="photo__arrow">
+    <path d="M1 1L51 51L1 101" />
+  </svg>
+</button>
     </div>
 
     <h3 class="photo__subtitle">Ім’я студента</h3>
